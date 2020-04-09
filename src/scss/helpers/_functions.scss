@@ -1,0 +1,18 @@
+/// Remove the unit of a length
+/// @param {Number} $value - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($value) {
+	@if type-of($value) == 'number' and not unitless($value) {
+		@return $value / ($value * 0 + 1);
+	}
+
+	@return $value;
+}
+
+/// Convert px to rem
+/// @param {Number} $px - Value in px
+/// @param {Number} $standard [16] - 1rem = 16px
+/// @return {Number} - Value in rem
+@function px-to-rem($px, $standard: 16) {
+	@return $px/$standard + 0rem;
+}

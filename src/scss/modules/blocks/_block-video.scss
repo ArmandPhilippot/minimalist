@@ -1,0 +1,8 @@
+.wp-block-video {
+	margin-bottom: $spacing_size-md;
+
+	&.alignleft,
+	&.alignright {
+		margin-bottom: $spacing_size-xxs;
+	}
+}

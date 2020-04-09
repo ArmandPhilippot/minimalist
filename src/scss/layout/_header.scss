@@ -1,0 +1,126 @@
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
+	align-items: center;
+	position: relative;
+	margin: 0 auto $spacing_size-lg;
+
+	@include mediaq(screen, 64em) {
+		align-items: baseline;
+	}
+
+	@include mediaq(screen, 80em) {
+		margin: 0 auto $spacing_size-xxl;
+	}
+
+	@include mediaq(screen, 120em) {
+		margin: 0 auto $spacing_size-xxxl;
+	}
+
+	.site-branding {
+		flex: 1 0 80%;
+		max-width: 80%;
+
+		@include mediaq(screen, 64em) {
+			flex: 1 0 38%;
+		}
+	}
+
+	.site-title {
+		margin: $spacing_size-md 0 0;
+		line-height: $line-height-initial;
+		font-size: $font_size-xxxl;
+		font-weight: 400;
+		word-break: break-all;
+
+		@include mediaq(screen, 37.5em) {
+			font-size: $font_size-xxxxl;
+		}
+
+		@include mediaq(screen, 48em) {
+			margin: $spacing_size-lg 0 0;
+			font-size: $font_size-xxxxxl;
+		}
+
+		@include mediaq(screen, 80em) {
+			font-size: $font_size-xxxxxxl;
+		}
+
+		a {
+			&:hover {
+				text-decoration: none;
+				color: $site-title-hover-color;
+			}
+
+			&:focus {
+				color: $site-title-focus-color;
+			}
+
+			&:active {
+				color: $site-title-active-color;
+			}
+		}
+	}
+
+	.site-description {
+		margin: 0;
+	}
+
+	> .top-nav-label {
+		flex: 0 0 auto;
+	}
+
+	.main-navigation {
+		flex: 1 0 100%;
+		justify-self: flex-end;
+
+		@include mediaq(screen, 37.5em) {
+			margin: $spacing_size-xs 0 0;
+		}
+
+		@include mediaq(screen, 48em) {
+			margin: $spacing_size-sm 0 0;
+		}
+
+		@include mediaq(screen, 64em) {
+			flex: 1 1 62%;
+		}
+	}
+}
+
+.wp-custom-logo {
+	.site-branding {
+		display: flex;
+
+		@include mediaq(screen, 37.5em) {
+			align-items: center;
+		}
+	}
+
+	.site-logo {
+		margin: $spacing_size-md $spacing_size-xs 0 0;
+
+		@include mediaq(screen, 37.5em) {
+			margin: $spacing_size-sm $spacing_size-md 0 0;
+		}
+
+		@include mediaq(screen, 48em) {
+			margin: $spacing_size-md $spacing_size-md 0 0;
+		}
+
+		a {
+			&:focus {
+				background: none;
+			}
+		}
+
+		img {
+			max-width: px-to-rem(50);
+
+			@include mediaq(screen, 37.5em) {
+				max-width: px-to-rem(75);
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+.wp-block-categories {
+	margin-bottom: $spacing_size-md;
+
+	&.alignleft,
+	&.alignright {
+		margin-bottom: $spacing_size-xxs;
+	}
+
+	&.alignfull,
+	&.alignwide {
+		select {
+			width: 100%;
+		}
+	}
+}

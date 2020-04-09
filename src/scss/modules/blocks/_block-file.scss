@@ -1,0 +1,68 @@
+.wp-block-file {
+	margin-bottom: $spacing_size-md;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+
+	&.alignleft,
+	&.alignright {
+		margin-bottom: $spacing_size-xxs;
+	}
+
+	&.aligncenter {
+		justify-content: center;
+	}
+
+	> a:first-child {
+		margin: $spacing_size-xs $spacing_size-sm 0 0;
+	}
+
+	a.wp-block-file__button {
+		background: $button-background-color;
+		border: none;
+		border-radius: px-to-rem(2);
+		box-shadow: px-to-rem(1) px-to-rem(1) 0 px-to-rem(2)
+			$button-shadow-color;
+		color: $button-color;
+		font-size: inherit;
+		cursor: pointer;
+		padding: $spacing_size-xxs $spacing_size-sm;
+		margin: $spacing_size-xs 0 0 0;
+		text-shadow: px-to-rem(1) px-to-rem(1) px-to-rem(1) rgba(0, 0, 0, 0.5);
+		position: relative;
+		left: 0;
+		top: 0;
+		transition: all 80ms ease;
+		max-width: 100%;
+		width: auto;
+
+		&:hover {
+			background: $button-hover-background-color;
+			color: $button-color;
+			text-decoration: none;
+			box-shadow: px-to-rem(1) px-to-rem(1) 0 px-to-rem(2)
+				$button-shadow-color;
+			opacity: 1;
+		}
+
+		&:focus {
+			background: $button-focus-background-color;
+			color: $button-color;
+			text-decoration: none;
+			box-shadow: px-to-rem(1) px-to-rem(1) 0 px-to-rem(2)
+				$button-shadow-color;
+			opacity: 1;
+		}
+
+		&:active {
+			background: $button-active-background-color;
+			color: $button-color;
+			box-shadow: none;
+			text-decoration: none;
+			outline: none;
+			opacity: 1;
+			top: px-to-rem(3);
+			left: px-to-rem(3);
+		}
+	}
+}

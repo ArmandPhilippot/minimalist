@@ -1,0 +1,151 @@
+.site-footer {
+	border-top: px-to-rem(1) solid $footer-border-color;
+	padding: $spacing_size-md 0;
+}
+
+.footer-widgets {
+	margin: $spacing_size-md 0 $spacing_size-lg;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: column wrap;
+
+	@include mediaq(screen, 37.5em) {
+		flex-flow: row wrap;
+	}
+
+	@include mediaq(screen, 80em) {
+		&:after {
+			content: '';
+			display: block;
+			margin-left: 28%;
+		}
+	}
+
+	.widget {
+		flex-basis: 100%;
+		min-width: 100%;
+
+		@include mediaq(screen, 37.5em) {
+			flex-basis: 45%;
+			min-width: 45%;
+		}
+
+		@include mediaq(screen, 80em) {
+			flex-basis: 28%;
+			min-width: 28%;
+		}
+	}
+
+	.widget_search {
+		@include mediaq(screen, 37.5em) {
+			flex-basis: 100%;
+			min-width: 100%;
+		}
+	}
+
+	.widget_calendar tbody td {
+		padding: 0.4045rem 0;
+	}
+}
+
+.footer-credits {
+	text-transform: uppercase;
+	font-size: $font_size-sm;
+}
+
+.footer-credits-container {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-end;
+
+	@include mediaq(screen, 48em) {
+		align-items: baseline;
+	}
+
+	.footer-copyright {
+		flex: 0 0 100%;
+		order: 2;
+		margin-bottom: $spacing_size-xxs;
+
+		@include mediaq(screen, 48em) {
+			flex: 0 0 auto;
+			margin-bottom: 0;
+		}
+	}
+
+	.footer-menu {
+		flex: 1 1 100%;
+		order: 1;
+		margin-bottom: $spacing_size-xxs;
+
+		@include mediaq(screen, 48em) {
+			flex: 1 1 100%;
+		}
+
+		ul {
+			@include list-reset;
+			display: flex;
+			flex-flow: row wrap;
+			margin: 0;
+
+			li {
+				flex: 0 0 auto;
+
+				&::before {
+					display: inline-block;
+					content: '|';
+					color: $footer-sep-color;
+					margin: 0 px-to-rem(4) 0 px-to-rem(2);
+				}
+
+				&:first-of-type::before {
+					display: none;
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	.footer-theme-creator {
+		flex: 0 0 auto;
+		order: 3;
+
+		p {
+			margin: 0;
+
+			@include mediaq(screen, 48em) {
+				&::before {
+					content: '-';
+					color: $footer-sep-color;
+					margin: 0 $spacing_size-xxs;
+				}
+			}
+		}
+
+		a {
+			display: inline-block;
+
+			&:hover,
+			&:focus,
+			&:active {
+				background: none;
+			}
+		}
+
+		img {
+			max-width: px-to-rem(25);
+			position: relative;
+		}
+	}
+
+	.to-the-top {
+		flex: 0 0 auto;
+		order: 4;
+		margin-left: auto;
+
+		span {
+			font-size: 1.5rem;
+			line-height: $line-height-initial;
+		}
+	}
+}

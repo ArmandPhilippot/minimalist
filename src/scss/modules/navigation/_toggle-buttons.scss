@@ -1,0 +1,329 @@
+/* Toggle buttons */
+.top-nav-label {
+	cursor: pointer;
+	display: block;
+	font-size: 0;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+
+	@include mediaq(screen, 64em, null, fine) {
+		display: none;
+	}
+
+	.open-close-menu {
+		display: block;
+		position: absolute;
+		z-index: 99999;
+
+		&::before,
+		&::after {
+			border-radius: px-to-rem(3);
+			content: '';
+			display: block;
+			position: absolute;
+		}
+	}
+}
+
+/* Hamburger button */
+.header-container > .top-nav-label {
+	position: relative;
+	right: $spacing_size-sm;
+	top: 0;
+	height: px-to-rem(40);
+	width: px-to-rem(40);
+	border-radius: px-to-rem(3);
+
+	@include mediaq(screen, 64em) {
+		display: none;
+	}
+
+	.open-close-menu {
+		background: $main-nav-toggle-color;
+		border-radius: px-to-rem(3);
+		height: px-to-rem(4);
+		left: px-to-rem(3);
+		right: px-to-rem(3);
+		top: px-to-rem(18);
+		transition: 0.25s ease-in-out 0s;
+
+		&::before,
+		&::after {
+			background-color: $main-nav-toggle-color;
+			height: px-to-rem(4);
+			left: 0;
+			transition-duration: 0.3s, 0.3s;
+			width: 100%;
+		}
+		&::before {
+			top: px-to-rem(11) * -1;
+			transform-origin: top;
+		}
+		&::after {
+			bottom: px-to-rem(11) * -1;
+			transform-origin: bottom;
+		}
+	}
+}
+
+/* Hamburger animation */
+.header-container
+	> [type='checkbox']:checked
+	~ .top-nav-label
+	.open-close-menu {
+	background: none;
+	transition-delay: 0s, 0.3s;
+
+	&::before,
+	&::after {
+		left: px-to-rem(2);
+		transition-delay: 0s, 0.3s;
+	}
+
+	&::before {
+		top: 0;
+		transform: rotate(45deg);
+	}
+
+	&::after {
+		bottom: 0;
+		transform: rotate(-45deg);
+	}
+}
+
+/* Hamburger button on hover/focus/active */
+.header-container > .top-nav-label {
+	&:hover {
+		background: $main-nav-toggle-hover-background-color;
+		color: $main-nav-toggle-hover-color;
+
+		.open-close-menu {
+			background: $main-nav-toggle-hover-color;
+
+			&::before,
+			&::after {
+				background: $main-nav-toggle-hover-color;
+			}
+		}
+	}
+
+	&:active {
+		background: $main-nav-toggle-active-background-color;
+		color: $main-nav-toggle-active-color;
+
+		.open-close-menu {
+			background: $main-nav-toggle-active-color;
+
+			&::before,
+			&::after {
+				background: $main-nav-toggle-active-color;
+			}
+		}
+	}
+}
+
+.header-container > input[type='checkbox'] {
+	&:hover ~ .top-nav-label {
+		background: $main-nav-toggle-hover-background-color;
+		color: $main-nav-toggle-hover-color;
+
+		.open-close-menu {
+			background: $main-nav-toggle-hover-color;
+
+			&::before,
+			&::after {
+				background: $main-nav-toggle-hover-color;
+			}
+		}
+	}
+
+	&:focus ~ .top-nav-label {
+		background: $main-nav-toggle-focus-background-color;
+		color: $main-nav-toggle-focus-color;
+
+		.open-close-menu {
+			background: $main-nav-toggle-focus-color;
+
+			&::before,
+			&::after {
+				background: $main-nav-toggle-focus-color;
+			}
+		}
+	}
+
+	&:checked {
+		&:hover ~ .top-nav-label,
+		&:focus ~ .top-nav-label {
+			.open-close-menu {
+				background: none;
+			}
+		}
+
+		~ .top-nav-label {
+			.open-close-menu {
+				background: none;
+			}
+		}
+	}
+}
+
+/* Plus/Minus button */
+.main-navigation .menu-item-has-children > .top-nav-label {
+	position: absolute;
+	right: px-to-rem(1);
+	top: px-to-rem(1);
+	height: px-to-rem(53);
+	width: px-to-rem(53);
+
+	@include mediaq(screen, 64em, null, coarse) {
+		height: px-to-rem(43);
+		width: px-to-rem(44);
+	}
+
+	.open-close-menu {
+		height: 100%;
+		width: 100%;
+
+		&::after,
+		&::before {
+			background: $main-nav-toggle-color;
+			transition: transform 0.25s ease-out;
+		}
+
+		&::before {
+			height: 50%;
+			left: calc(50% - 3px / 2);
+			top: 25%;
+			width: px-to-rem(3);
+		}
+
+		&::after {
+			height: px-to-rem(3);
+			left: 25%;
+			top: calc(50% - 3px / 2);
+			width: 50%;
+		}
+	}
+}
+
+.main-navigation .menu-item-has-children a:hover ~ .top-nav-label,
+.main-navigation .menu-item-has-children a:focus ~ .top-nav-label,
+.main-navigation .menu-item-has-children a:active ~ .top-nav-label,
+.main-navigation .menu-item-has-children:focus-within a ~ .top-nav-label {
+	background: $main-nav-plus-minus-background-color;
+
+	@include mediaq(screen, 64em, null, coarse) {
+		background: $main-nav-lg-plus-minus-background-color;
+	}
+}
+
+/* Plus/Minus button animation */
+.main-navigation [type='checkbox']:checked ~ .top-nav-label .open-close-menu {
+	&::before {
+		transform: rotate(90deg);
+	}
+
+	&::after {
+		transform: rotate(180deg);
+	}
+}
+
+/* Plus/Minus button on hover/focus/active */
+.main-navigation .top-nav-label {
+	&:hover {
+		background: $main-nav-toggle-hover-background-color;
+		color: $main-nav-toggle-hover-color;
+
+		.open-close-menu {
+			&::before,
+			&::after {
+				background: $main-nav-toggle-hover-color;
+			}
+		}
+	}
+
+	&:active {
+		background: $main-nav-toggle-active-background-color;
+		color: $main-nav-toggle-active-color;
+
+		.open-close-menu {
+			&::before,
+			&::after {
+				background: $main-nav-toggle-active-color;
+			}
+		}
+	}
+}
+
+.main-navigation input[type='checkbox'] {
+	&:hover ~ .top-nav-label {
+		background: $main-nav-toggle-hover-background-color;
+		color: $main-nav-toggle-hover-color;
+
+		.open-close-menu {
+			&::before,
+			&::after {
+				background: $main-nav-toggle-hover-color;
+			}
+		}
+	}
+
+	&:focus ~ .top-nav-label {
+		background: $main-nav-toggle-focus-background-color;
+		color: $main-nav-toggle-focus-color;
+
+		.open-close-menu {
+			&::before,
+			&::after {
+				background: $main-nav-toggle-focus-color;
+			}
+		}
+	}
+}
+
+/* Hide and place checkbox over the toggle buttons */
+.header-container {
+	input[type='checkbox'] {
+		cursor: pointer;
+		display: block;
+		opacity: 0;
+		position: absolute;
+		z-index: 2;
+	}
+
+	> input[type='checkbox'] {
+		right: px-to-rem(51);
+		top: px-to-rem(33);
+
+		@include mediaq(screen, 64em) {
+			display: none;
+		}
+	}
+
+	.menu-item-has-children input[type='checkbox'] {
+		right: px-to-rem(19);
+		top: px-to-rem(19);
+
+		@include mediaq(screen, 64em) {
+			display: none;
+		}
+
+		@include mediaq(screen, 64em, null, coarse) {
+			display: block;
+			right: px-to-rem(15);
+			top: px-to-rem(15);
+		}
+	}
+}
+
+/* Display the right label if checkbox checked */
+.header-container input[type='checkbox'] + .top-nav-label .close-menu,
+.header-container input[type='checkbox']:checked + .top-nav-label .open-menu {
+	display: none;
+}
+
+.header-container input[type='checkbox']:checked + .top-nav-label .close-menu,
+.header-container input[type='checkbox'] + .top-nav-label .open-menu {
+	display: block;
+}

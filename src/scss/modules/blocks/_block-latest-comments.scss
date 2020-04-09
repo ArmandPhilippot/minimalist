@@ -1,0 +1,49 @@
+.wp-block-latest-comments {
+	margin-bottom: $spacing_size-md;
+	@include list-reset;
+
+	&.alignleft,
+	&.alignright {
+		margin-bottom: $spacing_size-xxs;
+	}
+
+	&.has-excerpts .wp-block-latest-comments__comment {
+		margin-bottom: $spacing_size-md;
+	}
+
+	&:not(.has-excerpts) .wp-block-latest-comments__comment {
+		margin-bottom: $spacing_size-sm;
+	}
+
+	&.has-avatars {
+		.wp-block-latest-comments__comment {
+			min-height: px-to-rem(36);
+
+			.wp-block-latest-comments__comment-meta,
+			.wp-block-latest-comments__comment-excerpt {
+				margin-left: $spacing_size-xl;
+			}
+		}
+	}
+
+	.wp-block-latest-comments__comment-excerpt p {
+		margin: $spacing_size-xxs 0 $spacing_size-md;
+	}
+
+	.wp-block-latest-comments__comment-date {
+		color: $block-meta-color;
+		display: block;
+		font-size: $block-meta-font-size;
+	}
+
+	.wp-block-latest-comments .avatar,
+	.wp-block-latest-comments__comment-avatar {
+		border-radius: px-to-rem(24);
+		display: block;
+		float: left;
+		height: px-to-rem(40);
+		margin-right: $spacing_size-sm;
+		margin-top: $spacing_size-xxs;
+		width: px-to-rem(40);
+	}
+}

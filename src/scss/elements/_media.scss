@@ -1,0 +1,44 @@
+figure {
+	margin: 0;
+	max-width: 100%;
+	overflow: auto;
+	position: relative;
+}
+
+figcaption {
+	@include center-block;
+	width: auto;
+	max-height: 100%;
+	overflow: auto;
+	padding: $spacing_size-xxs $spacing_size-sm;
+	color: $figure-caption-color;
+	text-align: center;
+	font-size: $font_size-sm;
+	font-weight: 600;
+	background: $figure-caption-background-color;
+}
+
+img,
+video {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+/* Images with link */
+a img {
+	transition: opacity 0.2s;
+}
+
+a:hover img {
+	opacity: 0.7;
+}
+
+a:focus img {
+	opacity: 0.7;
+	outline: px-to-rem(2) dashed $media-link-focus-outline-color;
+}
+
+a:active img {
+	opacity: 1;
+}

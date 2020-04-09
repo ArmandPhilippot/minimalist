@@ -1,0 +1,45 @@
+.site-content .sidebar {
+	margin: $spacing_size-xxl auto $spacing_size-lg;
+
+	@include mediaq(screen, 37.5em) {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+
+	@include mediaq(screen, 64em) {
+		flex: 0 0 calc(#{px-to-rem($container_lg)} * 0.25);
+		width: calc(#{px-to-rem($container_lg)} * 0.25);
+		max-width: calc(#{px-to-rem($container_lg)} * 0.25);
+		display: block;
+		margin: $spacing_size-sm $spacing_size-lg $spacing_size-lg auto;
+	}
+
+	@include mediaq(screen, 80em) {
+		flex: 0 0 calc(#{px-to-rem($container_lg)} * 0.25);
+		width: calc(#{px-to-rem($container_lg)} * 0.25);
+		max-width: calc(#{px-to-rem($container_lg)} * 0.25);
+		margin-right: calc((100vw - #{px-to-rem($container_lg)}) / 2);
+	}
+
+	.widget {
+		flex-basis: 100%;
+		min-width: 100%;
+
+		@include mediaq(screen, 37.5em) {
+			flex-basis: 45%;
+			min-width: 45%;
+		}
+
+		@include mediaq(screen, 64em) {
+			min-width: 100%;
+		}
+	}
+
+	.widget_search {
+		@include mediaq(screen, 37.5em) {
+			flex-basis: 100%;
+			min-width: 100%;
+		}
+	}
+}

@@ -1,0 +1,169 @@
+/*
+ * Theme Name: Minimalist
+ * Adding Gutenberg editor styles.
+ */
+
+//=============================================================================
+// Configuration
+//=============================================================================
+@import 'helpers/variables';
+@import 'helpers/functions';
+@import 'helpers/mixins';
+
+//=============================================================================
+// Editor styles
+//=============================================================================
+.editor-styles-wrapper {
+	background: $body-background;
+
+	> * {
+		color: $body-text-color;
+		font-family: $font_body;
+		font-size: $font_size-base;
+		font-size: $font_size-base-rem;
+		line-height: $line-height;
+
+		@include mediaq(screen, 64em) {
+			font-size: $font_size-base-rem + 0.01;
+		}
+
+		@include mediaq(screen, 80em) {
+			font-size: $font_size-base-rem + 0.05;
+		}
+
+		@include mediaq(screen, 100em) {
+			font-size: $font_size-base-rem + 0.1;
+		}
+
+		@include mediaq(screen, 160em) {
+			font-size: $font_size-base-rem + 0.125;
+		}
+	}
+
+	.editor-post-title__block .editor-post-title__input {
+		color: $body-text-color;
+		font-family: $font_body;
+		font-size: $font_size-xxxxl;
+		font-weight: 300;
+	}
+
+	.block-editor-block-list__layout
+		.block-editor-block-list__block[data-align='left']
+		> .is-block-content {
+		float: left;
+		max-width: 50%;
+		width: 50%;
+	}
+
+	.block-editor-block-list__layout
+		.block-editor-block-list__block[data-align='right']
+		> .is-block-content {
+		float: right;
+		max-width: 50%;
+		width: 50%;
+	}
+
+	.block-editor-block-list__layout
+		.block-editor-block-list__block[data-align='center']
+		> .is-block-content {
+		clear: both;
+		text-align: center;
+		@include center-block;
+	}
+
+	.wp-block {
+		max-width: px-to-rem($container_sm);
+
+		&[data-align='full'] {
+			max-width: none;
+		}
+
+		&[data-align='wide'] {
+			max-width: 90%;
+		}
+
+		> * {
+			max-width: 100%;
+		}
+
+		@import 'typography/headings';
+		@import 'elements/blockquotes';
+		@import 'elements/links';
+		@import 'elements/lists';
+		@import 'elements/media';
+		@import 'elements/preformat';
+		@import 'elements/tables';
+		@import 'modules/blocks';
+
+		.wp-block-quote__citation,
+		.wp-block-quote cite,
+		.wp-block-quote footer,
+		.wp-block-pullquote__citation,
+		.wp-block-pullquote cite,
+		.wp-block-pullquote footer {
+			font-style: normal;
+			font-size: inherit;
+
+			&::before {
+				content: '\2014 \2009';
+			}
+		}
+
+		.wp-block-gallery.alignleft,
+		.wp-block-gallery.alignright {
+			max-width: 100%;
+		}
+
+		.wp-block-code {
+			background: $pre-code-background-color;
+			margin-bottom: $spacing_size-md;
+
+			&:not([class*='language-']) {
+				padding: $spacing_size-md;
+				border-radius: px-to-rem(3);
+			}
+
+			textarea {
+				background: $pre-code-background-color;
+				color: $pre-code-color;
+				font-size: inherit;
+				line-height: $line-height;
+			}
+		}
+
+		.wp-block-file {
+			.wp-block-file__button {
+				background: $button-background-color;
+				border: none;
+				border-radius: px-to-rem(2);
+				box-shadow: px-to-rem(1) px-to-rem(1) 0 px-to-rem(2)
+					$button-shadow-color;
+				color: $button-color;
+				font-size: inherit;
+				padding: $spacing_size-xxs $spacing_size-sm;
+				margin: $spacing_size-xs 0 0 0;
+				text-shadow: px-to-rem(1) px-to-rem(1) px-to-rem(1)
+					rgba(0, 0, 0, 0.5);
+				position: relative;
+				left: 0;
+				top: 0;
+				transition: all 80ms ease;
+				max-width: 100%;
+				width: auto;
+			}
+		}
+
+		.blocks-gallery-grid .blocks-gallery-image figcaption,
+		.blocks-gallery-grid .blocks-gallery-item figcaption,
+		.wp-block-gallery .blocks-gallery-image figcaption,
+		.wp-block-gallery .blocks-gallery-item figcaption {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding: $spacing_size-xxs $spacing_size-xs;
+			background: rgba($figure-caption-background-color, 0.8);
+			text-shadow: 1px 1px 0 rgba(#000, 0.7);
+		}
+	}
+}

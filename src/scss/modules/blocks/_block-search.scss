@@ -1,0 +1,31 @@
+.wp-block-search {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: $spacing_size-md;
+
+	&.alignleft,
+	&.alignright {
+		margin-bottom: $spacing_size-xxs;
+	}
+
+	.wp-block-search__label {
+		display: block;
+		width: 100%;
+	}
+
+	.wp-block-search__input {
+		flex-grow: 1;
+		max-width: 100%;
+	}
+
+	.wp-block-search__button {
+		box-shadow: none;
+		left: px-to-rem(2) * -1;
+		margin-left: 0;
+
+		&:active {
+			top: 0;
+			left: px-to-rem(2) * -1;
+		}
+	}
+}

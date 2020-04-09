@@ -1,0 +1,11 @@
+.wp-block-preformatted {
+	border: px-to-rem(1) solid $pre-border-color;
+	padding: $spacing_size-sm;
+	line-height: $line-height;
+	overflow: auto;
+	margin-bottom: $spacing_size-md;
+
+	@include mediaq(screen, 64em) {
+		padding: $spacing_size-lg;
+	}
+}

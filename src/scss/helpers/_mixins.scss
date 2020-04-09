@@ -1,0 +1,87 @@
+/// Set up clearfix
+@mixin clearfix {
+	zoom: 1;
+	overflow: auto;
+
+	&::before,
+	&::after {
+		content: '';
+		display: table;
+	}
+
+	&::after {
+		clear: both;
+	}
+}
+
+/// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/// List Reset
+@mixin list-reset {
+	list-style-type: none;
+	padding: 0;
+}
+
+/// Media Queries
+/// @param {String} $media-type [all] - Target media type. Either `all`, `screen`, `print`, 'speech' or 'retina'.
+/// @param {Number} $min-width [null] - Min Width with unit
+/// @param {Number} $max-width [null] - Max Width with unit
+/// @param {String} $pointer [null] - Target or not touch devices
+@mixin mediaq(
+	$media-type: all,
+	$min-width: null,
+	$max-width: null,
+	$pointer: null
+) {
+	$query: '';
+	$type: '';
+	@if $media-type == screen {
+		$type: 'only screen';
+	} @else if $media-type == print {
+		$type: 'only print';
+	} @else if $media-type == handled {
+		$type: 'only handheld';
+	} @else if $media-type == retina {
+		$type: '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)';
+	} @else {
+		$type: 'all';
+	}
+	$query: $query + $type;
+	@if $min-width != null {
+		@if is-number($min-width) and unit($min-width) != '' {
+			$query: $query + ' and (min-width: #{$min-width})';
+		} @else {
+			@error "Property #{$min-width} must be a number with unit.";
+		}
+	}
+	@if $max-width != null {
+		@if is-number($max-width) and unit($max-width) != '' {
+			$max-width: calc(#{$max-width} - 1px);
+			$query: $query + ' and (max-width: #{$max-width})';
+		} @else {
+			@error "Property #{$max-width} must be a number with unit.";
+		}
+	}
+	@if $pointer == coarse {
+		$query: $query + ' and (any-pointer: #{$pointer})';
+	} @else if $pointer == fine {
+		$query: $query + ' and (any-pointer: #{$pointer})';
+	} @else if $pointer == none {
+		$query: $query + ' and (any-pointer: #{$pointer})';
+	} @else if $pointer == null {
+		$query: $query;
+	} @else {
+		@error "Property #{$pointer} must be fine, coarse, none or null.";
+	}
+	@if $min-width == null and $max-width == null and $pointer == null {
+		@error "You must indicate #{$min-width}, #{$max-width} or #{$pointer}";
+	}
+	@media #{$query} {
+		@content;
+	}
+}

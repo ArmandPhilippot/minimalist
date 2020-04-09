@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/*
+ * Theme Name: Minimalist
+ * Adding print support. The print styles are based on the the great work of Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272/.
+ */
+/*==============================================================================
+ *>>> TABLE OF CONTENTS:
+ *==============================================================================
+ *# Margins, paddings & width
+ *# Page breaks
+ *# Links
+ *# Visibility
+ *============================================================================*/
+@media print {
+		/* Margins */
+		@page {
+				margin: 2cm;
+		}
+		@page :left {
+				margin: 4cm;
+		}
+		@page :right {
+				margin: 4cm;
+		}
+		.post,
+		.page {
+				-webkit-column-gap: 3em;
+				-moz-column-gap: 3em;
+				column-gap: 3em;
+				-webkit-column-width: 17em;
+				-moz-column-width: 17em;
+				column-width: 17em;
+		}
+		ul,
+		ol {
+				margin-bottom: 1.618rem;
+		}
+		/* Fonts */
+		body {
+				background: #fff !important;
+				color: #000;
+				font: 13pt Georgia, 'Times New Roman', Times, serif;
+				line-height: 1.3;
+		}
+		h1 {
+				font-size: 24pt;
+		}
+		h2 {
+				font-size: 20pt;
+		}
+		h3 {
+				font-size: 17pt;
+		}
+		h4 {
+				font-size: 14pt;
+				font-weight: normal;
+		}
+		/* Page breaks */
+		a {
+				page-break-inside: avoid;
+		}
+		blockquote {
+				page-break-inside: avoid;
+		}
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+				page-break-after: avoid;
+				page-break-inside: avoid;
+		}
+		img {
+				page-break-after: avoid;
+				page-break-inside: avoid;
+		}
+		table,
+		pre {
+				page-break-inside: avoid;
+		}
+		ul,
+		ol,
+		dl {
+				page-break-before: avoid;
+		}
+		p {
+				orphans: 2;
+				widows: 2;
+		}
+		/* Links */
+		a:link,
+		a:visited,
+		a {
+				background: transparent;
+				font-weight: bold;
+				text-decoration: underline;
+		}
+		a {
+				page-break-inside: avoid;
+		}
+		a[href^='http']::after,
+		a[href^='https']::after,
+		a[href^='mailto']::after,
+		a[href^='tel']::after {
+				content: " <‎ " attr(href) "‎ > ";
+		}
+		a::after > img {
+				content: '';
+		}
+		article a[href^='#']::after,
+		a[href^='javascript:']::after {
+				content: '';
+		}
+		a:not(:local-link)::after {
+				content: " <‎ " attr(href) "‎ > ";
+		}
+		/* Hiding unnecessary elements */
+		.navigation-top,
+		.top-nav-label,
+		.header-container input[type='checkbox'],
+		.site-footer,
+		.sidebar,
+		.navigation,
+		.comments-area {
+				display: none;
+		}
+		blockquote {
+				margin: 0 0 1.618rem;
+		}
+		blockquote p::before {
+				content: '"';
+		}
+		blockquote p::after {
+				content: '"';
+		}
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHJpbnQuY3NzIiwic291cmNlcyI6WyJwcmludC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQTs7O0dBR0c7QUFDSDs7Ozs7OztnRkFPZ0Y7QUFDaEYsTUFBTSxDQUFDLEtBQUs7RUFDWCxhQUFhO0VBQ2IsS0FBSztJQUNKLE1BQU0sRUFBRSxHQUFHOztFQUdaLEtBQUssQ0FBTCxLQUFLO0lBQ0osTUFBTSxFQUFFLEdBQUc7O0VBR1osS0FBSyxDQUFMLE1BQUs7SUFDSixNQUFNLEVBQUUsR0FBRzs7RUFHWixBQUFBLEtBQUs7RUFDTCxLQUFLLENBQUM7SUFDTCxrQkFBa0IsRUFBRSxHQUFHO0lBQ3ZCLGVBQWUsRUFBRSxHQUFHO0lBQ3BCLFVBQVUsRUFBRSxHQUFHO0lBQ2Ysb0JBQW9CLEVBQUUsSUFBSTtJQUMxQixpQkFBaUIsRUFBRSxJQUFJO0lBQ3ZCLFlBQVksRUFBRSxJQUFJO0dBQ2xCO0VBRUQsQUFBQSxFQUFFO0VBQ0YsRUFBRSxDQUFDO0lBQ0YsYUFBYSxFQUFFLFFBQVE7R0FDdkI7RUFFRCxXQUFXO0VBQ1gsQUFBQSxJQUFJLENBQUM7SUFDSixVQUFVLEVBQUUsZUFBZTtJQUMzQixLQUFLLEVBQUUsSUFBSTtJQUNYLElBQUksRUFBRSw2Q0FBNkM7SUFDbkQsV0FBVyxFQUFFLEdBQUc7R0FDaEI7RUFDRCxBQUFBLEVBQUUsQ0FBQztJQUNGLFNBQVMsRUFBRSxJQUFJO0dBQ2Y7RUFDRCxBQUFBLEVBQUUsQ0FBQztJQUNGLFNBQVMsRUFBRSxJQUFJO0dBQ2Y7RUFDRCxBQUFBLEVBQUUsQ0FBQztJQUNGLFNBQVMsRUFBRSxJQUFJO0dBQ2Y7RUFDRCxBQUFBLEVBQUUsQ0FBQztJQUNGLFNBQVMsRUFBRSxJQUFJO0lBQ2YsV0FBVyxFQUFFLE1BQU07R0FDbkI7RUFFRCxpQkFBaUI7RUFDakIsQUFBQSxDQUFDLENBQUM7SUFDRCxpQkFBaUIsRUFBRSxLQUFLO0dBQ3hCO0VBQ0QsQUFBQSxVQUFVLENBQUM7SUFDVixpQkFBaUIsRUFBRSxLQUFLO0dBQ3hCO0VBQ0QsQUFBQSxFQUFFO0VBQ0YsRUFBRTtFQUNGLEVBQUU7RUFDRixFQUFFO0VBQ0YsRUFBRTtFQUNGLEVBQUUsQ0FBQztJQUNGLGdCQUFnQixFQUFFLEtBQUs7SUFDdkIsaUJBQWlCLEVBQUUsS0FBSztHQUN4QjtFQUNELEFBQUEsR0FBRyxDQUFDO0lBQ0gsZ0JBQWdCLEVBQUUsS0FBSztJQUN2QixpQkFBaUIsRUFBRSxLQUFLO0dBQ3hCO0VBQ0QsQUFBQSxLQUFLO0VBQ0wsR0FBRyxDQUFDO0lBQ0gsaUJBQWlCLEVBQUUsS0FBSztHQUN4QjtFQUNELEFBQUEsRUFBRTtFQUNGLEVBQUU7RUFDRixFQUFFLENBQUM7SUFDRixpQkFBaUIsRUFBRSxLQUFLO0dBQ3hCO0VBQ0QsQUFBQSxDQUFDLENBQUM7SUFDRCxPQUFPLEVBQUUsQ0FBQztJQUNWLE1BQU0sRUFBRSxDQUFDO0dBQ1Q7RUFFRCxXQUFXO0VBQ1gsQUFBQSxDQUFDLEFBQUEsS0FBSztFQUNOLENBQUMsQUFBQSxRQUFRO0VBQ1QsQ0FBQyxDQUFDO0lBQ0QsVUFBVSxFQUFFLFdBQVc7SUFDdkIsV0FBVyxFQUFFLElBQUk7SUFDakIsZUFBZSxFQUFFLFNBQVM7R0FDMUI7RUFDRCxBQUFBLENBQUMsQ0FBQztJQUNELGlCQUFpQixFQUFFLEtBQUs7R0FDeEI7RUFDRCxBQUFBLENBQUMsQ0FBQSxBQUFBLElBQUMsRUFBTSxNQUFNLEFBQVosQ0FBYSxPQUFPO0VBQ3RCLENBQUMsQ0FBQSxBQUFBLElBQUMsRUFBTSxPQUFPLEFBQWIsQ0FBYyxPQUFPO0VBQ3ZCLENBQUMsQ0FBQSxBQUFBLElBQUMsRUFBTSxRQUFRLEFBQWQsQ0FBZSxPQUFPO0VBQ3hCLENBQUMsQ0FBQSxBQUFBLElBQUMsRUFBTSxLQUFLLEFBQVgsQ0FBWSxPQUFPLENBQUM7SUFDckIsT0FBTyxFQUFFLE9BQW1CLENBQUEsVUFBVSxDQUFDLE9BQW1CO0dBQzFEO0VBQ0QsQUFBQSxDQUFDLEFBQUEsT0FBTyxHQUFHLEdBQUcsQ0FBQztJQUNkLE9BQU8sRUFBRSxFQUFFO0dBQ1g7RUFDRCxBQUFBLE9BQU8sQ0FBQyxDQUFDLENBQUEsQUFBQSxJQUFDLEVBQU0sR0FBRyxBQUFULENBQVUsT0FBTztFQUMzQixDQUFDLENBQUEsQUFBQSxJQUFDLEVBQU0sYUFBYSxBQUFuQixDQUFvQixPQUFPLENBQUM7SUFDN0IsT0FBTyxFQUFFLEVBQUU7R0FDWDtFQUNELEFBQUEsQ0FBQyxBQUFBLElBQUssQ0FBQSxXQUFXLENBQUMsT0FBTyxDQUFDO0lBQ3pCLE9BQU8sRUFBRSxPQUFtQixDQUFBLFVBQVUsQ0FBQyxPQUFtQjtHQUMxRDtFQUVELGlDQUFpQztFQUNqQyxBQUFBLGVBQWU7RUFDZixjQUFjO0VBQ2QsaUJBQWlCLENBQUMsS0FBSyxDQUFBLEFBQUEsSUFBQyxDQUFLLFVBQVUsQUFBZjtFQUN4QixZQUFZO0VBQ1osUUFBUTtFQUNSLFdBQVc7RUFDWCxjQUFjLENBQUM7SUFDZCxPQUFPLEVBQUUsSUFBSTtHQUNiO0VBRUQsQUFBQSxVQUFVLENBQUM7SUFDVixNQUFNLEVBQUUsWUFBWTtHQVdwQjtFQVpELEFBSUUsVUFKUSxDQUdULENBQUMsQUFDQyxRQUFRLENBQUM7SUFDVCxPQUFPLEVBQUUsR0FBRztHQUNaO0VBTkgsQUFRRSxVQVJRLENBR1QsQ0FBQyxBQUtDLE9BQU8sQ0FBQztJQUNSLE9BQU8sRUFBRSxHQUFHO0dBQ1oifQ== */
+
+/*# sourceMappingURL=print.css.map */

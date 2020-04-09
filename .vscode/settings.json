@@ -1,0 +1,52 @@
+{
+	// Editor Settings
+	"editor.insertSpaces": false,
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": false,
+	// PHP Coding Standards Settings
+	"phpcs.enable": true,
+	"phpcs.standard": "WordPress",
+	// Prettier Settings
+	"prettier.arrowParens": "avoid",
+	"prettier.bracketSpacing": true,
+	"prettier.endOfLine": "lf",
+	"prettier.htmlWhitespaceSensitivity": "css",
+	"prettier.insertPragma": false,
+	"prettier.jsxBracketSameLine": false,
+	"prettier.jsxSingleQuote": true,
+	"prettier.printWidth": 80,
+	"prettier.proseWrap": "preserve",
+	"prettier.quoteProps": "as-needed",
+	"prettier.requirePragma": false,
+	"prettier.semi": true,
+	"prettier.singleQuote": true,
+	"prettier.tabWidth": 4,
+	"prettier.trailingComma": "es5",
+	"prettier.useTabs": true,
+	"prettier.vueIndentScriptAndStyle": true,
+	// CSS
+	"[css]": {
+		"editor.formatOnSave": true
+	},
+	// PHP
+	"[php]": {
+		"editor.detectIndentation": true,
+		"editor.useTabStops": true,
+		"editor.formatOnSave": false,
+		"editor.insertSpaces": false
+	},
+	// Javascript
+	"[javascript]": {
+		"editor.insertSpaces": true,
+		"editor.detectIndentation": false,
+		"editor.useTabStops": false
+	},
+	// Json
+	"[json]": {
+		"editor.formatOnSave": false
+	},
+	// XML
+	"[xml]": {
+		"editor.formatOnSave": false
+	}
+}

@@ -1,0 +1,18 @@
+pre.wp-block-code {
+	background: $pre-code-background-color;
+	max-height: 25rem;
+	margin-bottom: $spacing_size-md;
+
+	@include mediaq(screen, 80em) {
+		max-height: 30rem;
+	}
+
+	@include mediaq(screen, 100em) {
+		max-height: 35rem;
+	}
+
+	&:not([class*='language-']) {
+		padding: $spacing_size-md;
+		border-radius: px-to-rem(3);
+	}
+}

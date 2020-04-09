@@ -1,0 +1,39 @@
+.site-main .post,
+.site-main .page {
+	margin: 0 0 $spacing_size-md;
+
+	@include mediaq(screen, 48em) {
+		margin: 0 0 $spacing_size-lg;
+	}
+
+	@include mediaq(screen, 100em) {
+		margin: 0 0 $spacing_size-xl;
+	}
+
+	&.sticky {
+		background: $post-sticky-background-color;
+		padding: $spacing_size-md 0 $spacing_size-xxxs 0;
+	}
+}
+
+.single .site-main .post,
+.page .site-main .page {
+	margin: 0 0 $spacing_size-lg;
+
+	@include mediaq(screen, 64em) {
+		margin: 0 0 $spacing_size-xl;
+	}
+
+	@include mediaq(screen, 100em) {
+		margin: 0 0 $spacing_size-xxl;
+	}
+}
+
+.has-sidebar {
+	.site-main .post,
+	.site-main .page {
+		&.sticky {
+			padding: $spacing_size-md $spacing_size-lg $spacing_size-xxxs 0;
+		}
+	}
+}

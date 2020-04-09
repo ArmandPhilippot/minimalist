@@ -1,0 +1,86 @@
+button,
+input,
+optgroup,
+select,
+textarea {
+	line-height: $line-height;
+	max-width: 100%;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='number'],
+input[type='tel'],
+input[type='range'],
+input[type='date'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='color'],
+textarea {
+	border: px-to-rem(1) solid $input-border-color;
+	border-radius: px-to-rem(3);
+	padding: $spacing_size-sm $spacing_size-sm;
+
+	@include mediaq(screen, 80em) {
+		padding: $spacing_size-xxs $spacing_size-sm;
+	}
+
+	&:focus {
+		border: px-to-rem(1) solid $input-focus-border-color;
+		box-shadow: px-to-rem(1) px-to-rem(1) $input-focus-shadow-color;
+	}
+}
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	background: $button-background-color;
+	border: none;
+	border-radius: px-to-rem(2);
+	box-shadow: px-to-rem(1) px-to-rem(1) 0 px-to-rem(2) $button-shadow-color;
+	color: $button-color;
+	font-weight: 600;
+	cursor: pointer;
+	padding: $spacing_size-sm $spacing_size-sm;
+	text-shadow: px-to-rem(1) px-to-rem(1) px-to-rem(1) rgba(0, 0, 0, 0.5);
+	position: relative;
+	left: 0;
+	top: 0;
+	transition: all 80ms ease;
+
+	@include mediaq(screen, 80em) {
+		font-weight: 400;
+		padding: $spacing_size-xxs $spacing_size-sm;
+	}
+
+	&:hover {
+		background: $button-hover-background-color;
+	}
+
+	&:focus {
+		background: $button-focus-background-color;
+	}
+
+	&:active {
+		background: $button-active-background-color;
+		box-shadow: none;
+		outline: none;
+		top: px-to-rem(3);
+		left: px-to-rem(3);
+	}
+}
+
+select {
+	padding: $spacing_size-xxs $spacing_size-xs;
+}
+
+label {
+	cursor: pointer;
+}

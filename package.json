@@ -1,0 +1,52 @@
+{
+	"name": "minimalist",
+	"description": "Gulp configuration for Minimalist-Theme.",
+	"author": "Armand Philippot",
+	"homepage": "https://www.armandphilippot.com",
+	"license": "GPL-2.0-or-later",
+	"version": "1.0.0",
+	"keywords": [
+		"WordPress",
+		"Gulp"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ArmandPhilippot/minimalist.git"
+	},
+	"bugs": {
+		"url": "https://github.com/ArmandPhilippot/minimalist/issues"
+	},
+	"main": "gulpfile.js",
+	"scripts": {
+		"watch": "gulp",
+		"build": "gulp build",
+		"zipfolder": "gulp zipfolder"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.9.0",
+		"@babel/preset-env": "^7.9.5",
+		"browser-sync": "^2.26.7",
+		"del": "^5.1.0",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-babel": "^8.0.0",
+		"gulp-clean-css": "^4.2.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-filter": "^6.0.0",
+		"gulp-imagemin": "^7.1.0",
+		"gulp-line-ending-corrector": "^1.0.3",
+		"gulp-notify": "^3.2.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-postcss": "^8.0.0",
+		"gulp-rename": "^2.0.0",
+		"gulp-rtlcss": "^1.4.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-sort": "^2.0.0",
+		"gulp-sourcemaps": "^2.6.5",
+		"gulp-svg2png": "^2.0.2",
+		"gulp-uglify": "^3.0.2",
+		"gulp-wp-pot": "^2.4.1",
+		"gulp-zip": "^5.0.1",
+		"postcss-sorting": "^5.0.1"
+	}
+}

@@ -1,0 +1,145 @@
+/* Comment Headings */
+.comment-reply-title {
+	font-size: $font_size-xl;
+	font-weight: 300;
+}
+
+/* Comment List */
+.comment-list {
+	@include list-reset;
+
+	.children {
+		@include list-reset;
+		margin-left: $spacing_size-md;
+	}
+
+	article {
+		border-top: px-to-rem(1) solid $comment-border-color;
+		padding: $spacing_size-md 0;
+	}
+
+	.comment-form {
+		padding-bottom: $spacing_size-md;
+	}
+}
+
+.comment-author {
+	color: $comment-author-color;
+	margin-bottom: $spacing_size-xxs;
+}
+
+.comment-author .avatar {
+	float: left;
+	height: px-to-rem(70);
+	margin-right: $spacing_size-sm;
+	position: relative;
+	width: px-to-rem(70);
+}
+
+.bypostauthor > article .fn {
+	&::after {
+		content: '\1F464';
+		left: $spacing_size-xxs;
+		position: relative;
+	}
+}
+
+.comment-metadata {
+	font-size: $font_size-sm;
+	margin-bottom: $spacing_size-md;
+}
+
+a.comment-edit-link {
+	&::before {
+		content: '\270E';
+		margin-right: px-to-rem(3);
+	}
+}
+
+a.comment-reply-link {
+	display: inline-block;
+	border: px-to-rem(1) solid $comment-reply-link-border-color;
+	border-radius: px-to-rem(2);
+	padding: $spacing_size-sm $spacing_size-sm;
+	margin: 0 px-to-rem(3) $spacing_size-sm 0;
+
+	@include mediaq(screen, 80em) {
+		padding: $spacing_size-xxs $spacing_size-sm;
+	}
+
+	&:hover {
+		background: $comment-reply-link-hover-background-color;
+		color: $comment-reply-link-hover-color;
+	}
+
+	&:focus {
+		background: $comment-reply-link-focus-background-color;
+		color: $comment-reply-link-focus-color;
+	}
+
+	&:active {
+		background: $comment-reply-link-active-background-color;
+		color: $comment-reply-link-active-color;
+	}
+
+	&::before {
+		content: '\21a9';
+		margin-right: $spacing_size-xxs;
+		position: relative;
+	}
+}
+
+/* Comment Form */
+.comment-form {
+	.required {
+		color: $comment-form-required-color;
+		font-weight: 600;
+	}
+
+	label {
+		color: $comment-form-label-color;
+		display: block;
+		font-size: $comment-form-label-font-size;
+		letter-spacing: px-to-rem(1);
+		margin-bottom: $spacing_size-xxs;
+		text-transform: uppercase;
+	}
+
+	input[type='text'],
+	input[type='email'],
+	input[type='url'],
+	input[type='tel'],
+	input[type='date'],
+	input[type='month'],
+	input[type='week'],
+	input[type='time'],
+	input[type='datetime'],
+	input[type='datetime-local'],
+	textarea {
+		width: 100%;
+
+		@include mediaq(screen, 80em) {
+			width: 75%;
+		}
+	}
+
+	.comment-form-cookies-consent {
+		input {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		label {
+			display: inline;
+			letter-spacing: 0;
+			text-transform: none;
+			font-size: $comment-form-cookies-consent-font-size;
+			vertical-align: middle;
+		}
+	}
+}
+
+.form-allowed-tags {
+	color: $comment-form-allowed-tags-color;
+	font-size: $comment-form-allowed-tags-font-size;
+}

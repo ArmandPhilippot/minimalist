@@ -1,0 +1,27 @@
+table {
+	border: px-to-rem(1) solid $table-border-color;
+	border-collapse: collapse;
+	max-width: 100%;
+	table-layout: fixed;
+
+	td {
+		padding: $spacing_size-sm;
+		word-wrap: break-word;
+		hyphens: auto;
+	}
+
+	th {
+		background: $table-th-background-color;
+		color: $table-th-color;
+		padding: $spacing_size-sm;
+	}
+
+	tfoot {
+		border: px-to-rem(1) solid $table-border-color;
+		font-weight: 700;
+	}
+
+	tr:nth-child(2n) {
+		background: $table-tr-2n-background-color;
+	}
+}

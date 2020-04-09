@@ -1,0 +1,184 @@
+# Copyright (C) 2020 Minimalist
+# This file is distributed under the same license as the Minimalist package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Minimalist\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Armand Philippot <contact@armandphilippot.com>\n"
+"Last-Translator: Armand Philippot <contact@armandphilippot.com>\n"
+"Report-Msgid-Bugs-To: https://github.com/ArmandPhilippot/minimalist/issues\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: archive.php:28, author.php:36, category.php:31, comments.php:62, date.php:28, index.php:36, search.php:28, tag.php:31
+msgid "Previous"
+msgstr ""
+
+#: archive.php:29, author.php:37, category.php:32, comments.php:63, date.php:29, index.php:37, search.php:29, tag.php:32
+msgid "Next"
+msgstr ""
+
+#: author.php:22
+msgid "Website:"
+msgstr ""
+
+#. translators: %s: post title.
+#: comments.php:27
+msgctxt "comments title"
+msgid "One reply to &ldquo;%s&rdquo;"
+msgstr ""
+
+#: comments.php:53
+msgid "Reply"
+msgstr ""
+
+#: comments.php:69
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:109
+msgid "Small"
+msgstr ""
+
+#: functions.php:110
+msgid "S"
+msgstr ""
+
+#: functions.php:115
+msgid "Normal"
+msgstr ""
+
+#: functions.php:116
+msgid "M"
+msgstr ""
+
+#: functions.php:121
+msgid "Large"
+msgstr ""
+
+#: functions.php:122
+msgid "L"
+msgstr ""
+
+#: functions.php:127
+msgid "Huge"
+msgstr ""
+
+#: functions.php:128
+msgid "XL"
+msgstr ""
+
+#: functions.php:141, template-parts/header/navigation-top.php:18
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:142
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:158
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:160
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: functions.php:169
+msgid "Footer"
+msgstr ""
+
+#: functions.php:171
+msgid "Add widgets here to appear in your footer."
+msgstr ""
+
+#: header.php:22
+msgid "Skip to content"
+msgstr ""
+
+#. translators: %s: search query.
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:22
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:23
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:26
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: inc/template-functions.php:44
+msgid "Open submenu"
+msgstr ""
+
+#: inc/template-functions.php:44
+msgid "Close submenu"
+msgstr ""
+
+#. translators: %s: Name of current post.
+#. translators: %s: Name of current post.
+#: inc/template-functions.php:61, inc/template-functions.php:80
+msgid "Continue reading %s"
+msgstr ""
+
+#. translators: Copyright date format, see https://secure.php.net/date
+#: template-parts/footer/credits.php:15
+msgctxt "copyright date format"
+msgid "Y"
+msgstr ""
+
+#: template-parts/footer/credits.php:36
+msgid "Footer Links"
+msgstr ""
+
+#: template-parts/footer/credits.php:49
+msgid "Theme by"
+msgstr ""
+
+#: template-parts/footer/credits.php:51
+msgid "Back to top"
+msgstr ""
+
+#. translators: %s: HTML character for up arrow.
+#: template-parts/footer/credits.php:54
+msgid "Up %s"
+msgstr ""
+
+#: template-parts/header/navigation-top.php:14
+msgid "Open menu"
+msgstr ""
+
+#: template-parts/header/navigation-top.php:15
+msgid "Close menu"
+msgstr ""
+
+#: template-parts/page/content.php:29, template-parts/post/content.php:33
+msgid "Page"
+msgstr ""
+
+#: template-parts/page/content.php:29, template-parts/post/content.php:33
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/post/content-none.php:16
+msgid "Nothing Found"
+msgstr ""
+
+#. translators: %1$s: URL to publish post.
+#: template-parts/post/content-none.php:25
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""

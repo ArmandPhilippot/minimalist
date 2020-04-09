@@ -1,0 +1,124 @@
+.wp-block-gallery {
+	margin-bottom: $spacing_size-md;
+
+	&.alignleft,
+	&.alignright {
+		max-width: 50%;
+		margin-bottom: $spacing_size-xxs;
+	}
+
+	&.is-cropped .blocks-gallery-image,
+	&.is-cropped .blocks-gallery-item {
+		a,
+		img {
+			// IE11 doesn't support object-fit, so just make sure images aren't skewed.
+			// The following rules are for all browsers.
+			width: 100%;
+
+			// IE11 doesn't read rules inside this query. They are applied only to modern browsers.
+			@supports (position: sticky) {
+				height: 100%;
+				flex: 1;
+				object-fit: cover;
+			}
+		}
+	}
+
+	@for $i from 2 through 9 {
+		&.columns-#{$i} .blocks-gallery-image,
+		&.columns-#{$i} .blocks-gallery-item {
+			width: calc(100% / 2 - #{$spacing_size-sm});
+			margin: 0 $spacing_size-sm $spacing_size-sm 0;
+
+			&:nth-of-type(2n) {
+				margin-right: 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			@include mediaq(screen, 37.5em) {
+				width: calc(100% / #{$i} - #{$spacing_size-sm});
+
+				&:nth-of-type(2n) {
+					margin-right: $spacing_size-sm;
+				}
+
+				&:nth-of-type(#{$i}n),
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	.blocks-gallery-grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		max-width: 100%;
+		margin: 0;
+		@include list-reset;
+	}
+
+	.blocks-gallery-item {
+		margin: 0 0 $spacing_size-sm;
+		position: relative;
+		width: calc(100% - #{$spacing_size-md});
+
+		figure {
+			display: flex;
+			align-items: flex-end;
+			justify-content: flex-start;
+			margin: 0;
+			height: 100%;
+			overflow: initial;
+		}
+
+		a {
+			&:hover,
+			&:active {
+				border: none;
+			}
+			&:focus {
+				background: none;
+			}
+		}
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			width: auto;
+		}
+
+		.blocks-gallery-item__caption {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding: $spacing_size-xxs $spacing_size-xs;
+			background: rgba($figure-caption-background-color, 0.8);
+			text-shadow: 1px 1px 0 rgba(#000, 0.7);
+		}
+
+		&:hover .blocks-gallery-item__caption,
+		a:focus ~ .blocks-gallery-item__caption {
+			font-size: $font_size-md;
+		}
+	}
+
+	.blocks-gallery-caption {
+		background: $gallery-figure-caption-background-color;
+		border: px-to-rem(1) solid $gallery-figure-caption-border-color;
+		color: $gallery-figure-caption-color;
+		text-align: center;
+		font-size: 0.9rem;
+		font-weight: 600;
+		width: 100%;
+		max-height: 100%;
+		overflow: auto;
+		padding: $spacing_size-xxs $spacing_size-sm;
+		margin: 0 auto $spacing_size-md;
+	}
+}

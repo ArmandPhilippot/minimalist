@@ -1,0 +1,73 @@
+.wp-block-pullquote {
+	border-top: px-to-rem(3) solid $blockquote-border-color;
+	border-bottom: px-to-rem(3) solid $blockquote-border-color;
+	padding: 0;
+	margin-bottom: $spacing_size-md;
+	text-align: center;
+
+	&.alignleft,
+	&.alignright {
+		max-width: 50%;
+		margin-bottom: $spacing_size-xxs;
+
+		p {
+			font-size: $font_size-md;
+
+			@include mediaq(screen, 37.5em) {
+				font-size: $font_size-lg;
+			}
+		}
+	}
+
+	&.is-style-solid-color {
+		border: none;
+
+		blockquote {
+			margin-left: auto;
+			margin-right: auto;
+			text-align: left;
+			max-width: 80%;
+
+			@include mediaq(screen, 37.5em) {
+				max-width: 60%;
+			}
+
+			p {
+				margin-top: 0;
+				margin-bottom: $spacing_size-sm;
+				font-size: $font_size-xl;
+
+				@include mediaq(screen, 37.5em) {
+					font-size: $font_size-xxl;
+				}
+			}
+
+			cite {
+				text-transform: none;
+				font-style: normal;
+			}
+		}
+	}
+
+	&:not(.is-style-solid-color) {
+		background: none;
+	}
+
+	.has-text-color a {
+		color: inherit;
+	}
+
+	blockquote {
+		border: none;
+		padding: 0;
+	}
+
+	p {
+		font-size: $font_size-xl;
+	}
+
+	cite,
+	footer {
+		position: relative;
+	}
+}

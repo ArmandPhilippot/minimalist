@@ -1,0 +1,94 @@
+.wp-block-table {
+	margin-bottom: $spacing_size-md;
+
+	&.alignleft,
+	&.alignright {
+		margin-bottom: $spacing_size-xxs;
+	}
+
+	&.is-style-stripes {
+		table tr:nth-child(2n) {
+			background: $table-tr-2n-background-color;
+		}
+
+		table tr:nth-child(odd) {
+			background: inherit;
+		}
+
+		table.has-background.has-subtle-light-gray-background-color {
+			border-color: darken($block-table-subtle-light-gray, 70%);
+
+			tr:nth-child(2n) {
+				background-color: $block-table-subtle-light-gray;
+			}
+		}
+
+		table.has-background.has-subtle-pale-green-background-color {
+			background-color: $block-table-subtle-pale-green;
+			border-color: darken($block-table-subtle-pale-green, 70%);
+
+			tr:nth-child(2n) {
+				background-color: $block-table-subtle-pale-green;
+			}
+		}
+
+		table.has-background.has-subtle-pale-blue-background-color {
+			border-color: darken($block-table-subtle-pale-blue, 70%);
+
+			tr:nth-child(2n) {
+				background-color: $block-table-subtle-pale-blue;
+			}
+		}
+
+		table.has-background.has-subtle-pale-pink-background-color {
+			border-color: darken($block-table-subtle-pale-pink, 70%);
+
+			tr:nth-child(2n) {
+				background-color: $block-table-subtle-pale-pink;
+			}
+		}
+	}
+
+	&:not(.is-style-stripes) {
+		.has-background.has-subtle-light-gray-background-color {
+			background-color: $block-table-subtle-light-gray;
+			border-color: darken($block-table-subtle-light-gray, 70%);
+		}
+
+		.has-background.has-subtle-pale-green-background-color {
+			background-color: $block-table-subtle-pale-green;
+			border-color: darken($block-table-subtle-pale-green, 70%);
+		}
+
+		.has-background.has-subtle-pale-blue-background-color {
+			background-color: $block-table-subtle-pale-blue;
+			border-color: darken($block-table-subtle-pale-blue, 70%);
+		}
+
+		.has-background.has-subtle-pale-pink-background-color {
+			background-color: $block-table-subtle-pale-pink;
+			border-color: darken($block-table-subtle-pale-pink, 70%);
+		}
+	}
+
+	table {
+		width: 100%;
+
+		&.has-fixed-layout {
+			table-layout: fixed;
+			width: 100%;
+		}
+
+		&:not(.has-fixed-layout) {
+			table-layout: auto;
+		}
+
+		tr:nth-child(2n) {
+			background: inherit;
+		}
+
+		th {
+			text-align: inherit;
+		}
+	}
+}

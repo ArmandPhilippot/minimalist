@@ -1,0 +1,80 @@
+.gallery {
+	display: flex;
+	flex-flow: row wrap;
+	margin-bottom: $spacing_size-md;
+}
+
+.gallery-item {
+	display: inline-block;
+	margin-right: $spacing_size-xs;
+	margin-bottom: $spacing_size-xs;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+	height: fit-content;
+	overflow: initial;
+
+	// Loops to enumerate the classes for gallery columns.
+	@for $i from 2 through 9 {
+		.gallery-columns-#{$i} & {
+			max-width: calc((100% - #{$spacing_size-sm} * #{$i - 1}) / #{$i});
+
+			&:nth-of-type(#{$i}n + #{$i}) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&:last-of-type {
+		padding-right: 0;
+	}
+
+	a {
+		display: block;
+		line-height: 0;
+
+		// Accessibility
+		box-shadow: 0 0 0 0 transparent;
+
+		&:focus {
+			background: none;
+		}
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+		width: 100%;
+	}
+}
+
+.gallery-caption {
+	position: absolute;
+	top: initial;
+	bottom: 0;
+	width: 100%;
+	max-height: 100%;
+	overflow: auto;
+	padding: $spacing_size-xxs $spacing_size-sm;
+	color: $gallery-caption-color;
+	text-align: center;
+	font-size: $font_size-sm;
+	background: linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.7),
+		rgba(0, 0, 0, 0.3) 70%,
+		transparent
+	);
+
+	&:hover {
+		background: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 1),
+			rgba(0, 0, 0, 0.7) 50%,
+			rgba(0, 0, 0, 0.2)
+		);
+		font-size: $font_size-md;
+		height: 100%;
+	}
+}

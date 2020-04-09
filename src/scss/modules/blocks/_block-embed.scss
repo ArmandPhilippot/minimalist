@@ -1,0 +1,9 @@
+.wp-block-embed {
+	margin-bottom: $spacing_size-md;
+
+	&.alignleft,
+	&.alignright {
+		max-width: 50%;
+		margin-bottom: $spacing_size-xxs;
+	}
+}

@@ -1,0 +1,35 @@
+/* Text meant only for screen readers. */
+.says,
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px 1px 1px 1px);
+	/* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	height: px-to-rem(1);
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: px-to-rem(1);
+	word-break: normal;
+	word-wrap: normal !important;
+	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background: $screen-reader-background-color;
+	border: px-to-rem(2) solid $screen-reader-border-color;
+	border-radius: px-to-rem(3);
+	box-shadow: 0 0 px-to-rem(2) px-to-rem(2) rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: $screen-reader-color;
+	display: block;
+	font-size: px-to-rem(18);
+	font-weight: 700;
+	height: auto;
+	left: px-to-rem(5);
+	padding: px-to-rem(14) px-to-rem(23);
+	top: px-to-rem(7);
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}

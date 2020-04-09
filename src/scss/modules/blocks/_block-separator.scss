@@ -1,0 +1,23 @@
+.wp-block-separator {
+	margin: $spacing_size-md auto;
+	max-width: 100%;
+
+	&.is-style-wide {
+		border-bottom-width: px-to-rem(4);
+	}
+
+	&.is-style-dots {
+		background: none !important;
+		border: none;
+		text-align: center;
+		max-width: none;
+		line-height: 1;
+		height: auto;
+
+		&::before {
+			content: '\00b7 \00b7 \00b7';
+			font-size: px-to-rem(30);
+			letter-spacing: 2rem;
+		}
+	}
+}

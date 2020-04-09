@@ -1,0 +1,142 @@
+.wp-block-media-text {
+	/*!rtl:begin:ignore*/
+	direction: ltr;
+	/*!rtl:end:ignore*/
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 50% 1fr;
+	margin-bottom: $spacing_size-md;
+
+	&.has-media-on-the-right {
+		grid-template-columns: 1fr 50%;
+
+		.wp-block-media-text__media {
+			grid-column: 2;
+			grid-row: 1;
+		}
+
+		.wp-block-media-text__content {
+			grid-column: 1;
+			grid-row: 1;
+		}
+	}
+
+	&.is-image-fill {
+		figure {
+			height: 100%;
+			min-height: px-to-rem(250);
+			background-size: cover;
+
+			> img {
+				position: absolute;
+				width: px-to-rem(1);
+				height: px-to-rem(1);
+				padding: 0;
+				margin: px-to-rem(1) * -1;
+				overflow: hidden;
+				clip: rect(0, 0, 0, 0);
+				border: 0;
+			}
+		}
+	}
+
+	&.is-vertically-aligned-center {
+		.wp-block-media-text__media,
+		.wp-block-media-text__content {
+			align-self: center;
+		}
+	}
+
+	&.is-vertically-aligned-top {
+		.wp-block-media-text__media,
+		.wp-block-media-text__content {
+			align-self: start;
+		}
+	}
+
+	&.is-vertically-aligned-bottom {
+		.wp-block-media-text__media,
+		.wp-block-media-text__content {
+			align-self: end;
+		}
+	}
+
+	&.has-background {
+		.wp-block-media-text__content {
+			padding: $spacing_size-xs $spacing_size-sm;
+
+			@include mediaq(screen, 48em) {
+				padding: $spacing_size-sm $spacing_size-md;
+			}
+		}
+	}
+
+	> figure {
+		margin: 0;
+
+		> img,
+		> video {
+			max-width: unset;
+			width: 100%;
+			vertical-align: middle;
+		}
+	}
+
+	.wp-block-media-text__content {
+		word-break: break-word;
+		padding: 0 3%;
+		grid-column: 2;
+		grid-row: 1;
+		align-self: center;
+
+		@include mediaq(screen, 48em) {
+			padding: 0 8%;
+		}
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.wp-block-media-text__media {
+		grid-column: 1;
+		grid-row: 1;
+		align-self: center;
+	}
+}
+
+/*
+* Here we here not able to use a mobile first CSS approach.
+* Custom widths are set using inline styles, and on mobile, we need 100% width
+* so we use important to overwrite the inline style.
+* If the style were set on mobile first, on desktop styles, we would have no
+* way of setting the style again to the inline style.
+*/
+.wp-block-media-text.is-stacked-on-mobile {
+	@include mediaq(screen, null, 48em) {
+		grid-template-columns: 100% !important;
+
+		.wp-block-media-text__media {
+			grid-column: 1;
+			grid-row: 1;
+			margin-bottom: $spacing_size-md;
+		}
+
+		.wp-block-media-text__content {
+			grid-column: 1;
+			grid-row: 2;
+		}
+
+		&.has-media-on-the-right .wp-block-media-text__media {
+			grid-column: 1;
+			grid-row: 2;
+			margin-bottom: 0;
+		}
+
+		&.has-media-on-the-right .wp-block-media-text__content {
+			grid-column: 1;
+			grid-row: 1;
+			margin-bottom: $spacing_size-md;
+		}
+	}
+}

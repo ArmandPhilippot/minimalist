@@ -1,0 +1,155 @@
+.wp-block-cover {
+	position: relative;
+	background-color: $block-cover-background-color;
+	background-size: cover;
+	background-position: center center;
+	min-height: px-to-rem(250);
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	margin-bottom: $spacing_size-md;
+
+	&.has-parallax {
+		background-attachment: fixed;
+
+		// Mobile Safari does not support fixed background attachment properly.
+		// See also https://stackoverflow.com/questions/24154666/background-size-cover-not-working-on-ios
+		// Chrome on Android does not appear to support the attachment at all: https://issuetracker.google.com/issues/36908439
+		@supports (-webkit-overflow-scrolling: touch) {
+			background-attachment: scroll;
+		}
+
+		// Remove the appearance of scrolling based on OS-level animation preferences.
+		@media (prefers-reduced-motion: reduce) {
+			background-attachment: scroll;
+		}
+	}
+
+	&.has-background-dim {
+		&::before {
+			content: '';
+			background-color: inherit;
+		}
+
+		&:not(.has-background-gradient)::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: 1;
+			opacity: 0.5;
+		}
+	}
+
+	@for $i from 1 through 10 {
+		&.has-background-dim.has-background-dim-#{ $i * 10 } {
+			&:not(.has-background-gradient)::before {
+				opacity: $i * 0.1;
+			}
+			.wp-block-cover__gradient-background {
+				opacity: $i * 0.1;
+			}
+		}
+	}
+
+	&.aligncenter,
+	&.alignleft,
+	&.alignright {
+		display: flex;
+	}
+
+	// Using flexbox without an assigned height property breaks vertical center alignment in IE11.
+	// Appending an empty ::after element tricks IE11 into giving the cover image an implicit height, which sidesteps this issue.
+	&::after {
+		display: block;
+		content: '';
+		font-size: 0;
+		min-height: inherit;
+
+		// IE doesn't support flex so omit that.
+		@supports (position: sticky) {
+			content: none;
+		}
+	}
+
+	&.alignleft,
+	&.alignright {
+		max-width: 50%;
+		margin-bottom: $spacing_size-xxs;
+	}
+
+	.wp-block-cover__inner-container {
+		width: calc(100% - #{$spacing_size-xxxl});
+		z-index: 1;
+		color: $block-cover-inner-color;
+		text-shadow: px-to-rem(1) px-to-rem(2) 0 rgba(0, 0, 0, 0.8);
+	}
+
+	.wp-block-cover__video-background {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		object-fit: cover;
+	}
+
+	p {
+		margin-bottom: 0;
+
+		&.has-drop-cap:not(:focus)::first-letter {
+			float: none;
+			margin: 0;
+		}
+	}
+}
+
+body:not(.has-sidebar) .wp-block-cover {
+	&.alignfull,
+	&.alignwide {
+		.wp-block-cover__inner-container {
+			@include mediaq(screen, 55em) {
+				max-width: px-to-rem($container_xs);
+				width: px-to-rem($container_xs);
+			}
+
+			@include mediaq(screen, 80em) {
+				max-width: px-to-rem($container_sm);
+				width: px-to-rem($container_sm);
+			}
+
+			@include mediaq(screen, 160em) {
+				max-width: px-to-rem($container_md);
+				width: px-to-rem($container_md);
+			}
+		}
+	}
+}
+
+.has-sidebar .wp-block-cover {
+	&.alignfull,
+	&.alignwide {
+		.wp-block-cover__inner-container {
+			@include mediaq(screen, 80em) {
+				position: absolute;
+				right: 0;
+				max-width: calc(
+					#{px-to-rem($container_lg)} * 0.65 - #{$spacing_size-lg}
+				);
+				width: 100%;
+				margin: 0 $spacing_size-lg;
+			}
+
+			@include mediaq(screen, 160em) {
+				max-width: calc(
+					#{px-to-rem($container_xxl)} * 0.65 - #{$spacing_size-lg}
+				);
+			}
+		}
+	}
+}

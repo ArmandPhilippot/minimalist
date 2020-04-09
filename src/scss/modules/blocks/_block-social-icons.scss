@@ -1,0 +1,440 @@
+.wp-block-social-links {
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: row wrap;
+	padding-left: 0;
+	padding-right: 0;
+	// Some themes give all <ul> default margin instead of padding.
+	margin-left: 0;
+
+	// Some themes add underlines, false underlines (via shadows), and borders to <a>.
+	.wp-social-link a,
+	.wp-social-link a:hover {
+		text-decoration: none;
+		border-bottom: 0;
+		box-shadow: none;
+	}
+
+	&.alignleft,
+	&.alignright {
+		margin-bottom: $spacing_size-xxs;
+	}
+
+	&.alignright {
+		margin-left: $spacing_size-md;
+		justify-content: flex-end;
+	}
+}
+
+.wp-social-link {
+	display: block;
+	width: px-to-rem(36);
+	height: px-to-rem(36);
+	border-radius: 0; // This makes it pill-shaped instead of oval, in cases where the image fed is not perfectly sized.
+	margin-right: $spacing_size-xxs;
+	margin-bottom: $spacing_size-xxs;
+	transition: transform 0.1s ease;
+
+	a {
+		padding: px-to-rem(6);
+		display: block;
+		line-height: 0;
+		transition: transform 0.1s ease;
+	}
+
+	a,
+	a:hover,
+	a:active,
+	a:visited,
+	svg {
+		color: currentColor;
+		fill: currentColor;
+	}
+
+	a:focus {
+		background: inherit;
+		transform: scale(1.1);
+	}
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+// Center flex items. This has an equivalent in editor.scss.
+// It also needs to override some of the default classes usually applied to the centering class.
+.wp-block-social-links.aligncenter {
+	justify-content: center;
+	display: flex;
+}
+
+// Provide colors for a range of icons.
+.wp-block-social-links:not(.is-style-logos-only) {
+	// Generic items such as mail, feed, etc.
+	.wp-social-link {
+		background-color: #f0f0f0;
+		color: #444;
+	}
+
+	.wp-social-link-amazon {
+		background-color: #f7981c;
+		color: #fff;
+	}
+
+	.wp-social-link-bandcamp {
+		background-color: #61929c;
+		color: #fff;
+	}
+
+	.wp-social-link-behance {
+		background-color: #0057ff;
+		color: #fff;
+	}
+
+	.wp-social-link-codepen {
+		background-color: #000;
+		color: #fff;
+	}
+
+	.wp-social-link-deviantart {
+		background-color: #00e59b;
+		color: #fff;
+	}
+
+	.wp-social-link-dribbble {
+		background-color: #ea4c89;
+		color: #fff;
+	}
+
+	.wp-social-link-dropbox {
+		background-color: #0061fe;
+		color: #fff;
+	}
+
+	.wp-social-link-etsy {
+		background-color: #f1641e;
+		color: #fff;
+	}
+
+	.wp-social-link-facebook {
+		background-color: #1778f2;
+		color: #fff;
+	}
+
+	.wp-social-link-fivehundredpx {
+		background-color: #000;
+		color: #fff;
+	}
+
+	.wp-social-link-flickr {
+		background-color: #0062dc;
+		color: #fff;
+	}
+
+	.wp-social-link-foursquare {
+		background-color: #ef4876;
+		color: #fff;
+	}
+
+	.wp-social-link-github {
+		background-color: #171515;
+		color: #fff;
+	}
+
+	.wp-social-link-goodreads {
+		background-color: #eceadd;
+		color: #382110;
+	}
+
+	.wp-social-link-google {
+		background-color: #ea4434;
+		color: #fff;
+	}
+
+	.wp-social-link-instagram {
+		background-color: #f00075;
+		color: #fff;
+	}
+
+	.wp-social-link-lastfm {
+		background-color: #b90000;
+		color: #fff;
+	}
+
+	.wp-social-link-linkedin {
+		background-color: #0a66c2;
+		color: #fff;
+	}
+
+	.wp-social-link-mastodon {
+		background-color: #3088d4;
+		color: #fff;
+	}
+
+	.wp-social-link-medium {
+		background-color: #02ab6c;
+		color: #fff;
+	}
+
+	.wp-social-link-meetup {
+		background-color: #f64060;
+		color: #fff;
+	}
+
+	.wp-social-link-pinterest {
+		background-color: #e60023;
+		color: #fff;
+	}
+
+	.wp-social-link-pocket {
+		background-color: #ee4056;
+		color: #fff;
+	}
+
+	.wp-social-link-reddit {
+		background-color: #ff4500;
+		color: #fff;
+	}
+
+	.wp-social-link-skype {
+		background-color: #0078d7;
+		color: #fff;
+	}
+
+	.wp-social-link-snapchat {
+		background-color: #fffc00;
+		color: #fff;
+		stroke: #000;
+	}
+
+	.wp-social-link-soundcloud {
+		background-color: #ff5500;
+		color: #fff;
+	}
+
+	.wp-social-link-spotify {
+		background-color: #1db954;
+		color: #fff;
+	}
+
+	.wp-social-link-tumblr {
+		background-color: #001935;
+		color: #fff;
+	}
+
+	.wp-social-link-twitch {
+		background-color: #9146ff;
+		color: #fff;
+	}
+
+	.wp-social-link-twitter {
+		background-color: #1da1f3;
+		color: #fff;
+	}
+
+	.wp-social-link-vimeo {
+		background-color: #1ab7ea;
+		color: #fff;
+	}
+
+	.wp-social-link-vk {
+		background-color: #4680c2;
+		color: #fff;
+	}
+
+	.wp-social-link-wordpress {
+		background-color: #585c60;
+		color: #fff;
+	}
+
+	.wp-social-link-yelp {
+		background-color: #db212a;
+		color: #fff;
+	}
+
+	.wp-social-link-youtube {
+		background-color: #ff0000;
+		color: #fff;
+	}
+}
+
+// Treatment for logos only style.
+.wp-block-social-links.is-style-logos-only {
+	.wp-social-link {
+		background: none;
+
+		padding: px-to-rem(4);
+
+		a {
+			padding: 0;
+		}
+
+		svg {
+			width: px-to-rem(30);
+			height: px-to-rem(30);
+		}
+	}
+
+	.wp-social-link-amazon {
+		color: #f7981c;
+	}
+
+	.wp-social-link-bandcamp {
+		color: #61929c;
+	}
+
+	.wp-social-link-behance {
+		color: #0057ff;
+	}
+
+	.wp-social-link-codepen {
+		color: #000;
+	}
+
+	.wp-social-link-deviantart {
+		color: #00e59b;
+	}
+
+	.wp-social-link-dribbble {
+		color: #ea4c89;
+	}
+
+	.wp-social-link-dropbox {
+		color: #0061fe;
+	}
+
+	.wp-social-link-etsy {
+		color: #f1641e;
+	}
+
+	.wp-social-link-facebook {
+		color: #1778f2;
+	}
+
+	.wp-social-link-fivehundredpx {
+		color: #000;
+	}
+
+	.wp-social-link-flickr {
+		color: #0062dc;
+	}
+
+	.wp-social-link-foursquare {
+		color: #ef4876;
+	}
+
+	.wp-social-link-github {
+		color: #171515;
+	}
+
+	.wp-social-link-goodreads {
+		color: #382110;
+	}
+
+	.wp-social-link-google {
+		color: #ea4434;
+	}
+
+	.wp-social-link-instagram {
+		color: #f00075;
+	}
+
+	.wp-social-link-lastfm {
+		color: #b90000;
+	}
+
+	.wp-social-link-linkedin {
+		color: #0a66c2;
+	}
+
+	.wp-social-link-mastodon {
+		color: #3088d4;
+	}
+
+	.wp-social-link-medium {
+		color: #02ab6c;
+	}
+
+	.wp-social-link-meetup {
+		color: #f64060;
+	}
+
+	.wp-social-link-pinterest {
+		color: #e60023;
+	}
+
+	.wp-social-link-pocket {
+		color: #ee4056;
+	}
+
+	.wp-social-link-reddit {
+		color: #ff4500;
+	}
+
+	.wp-social-link-skype {
+		color: #0078d7;
+	}
+
+	.wp-social-link-snapchat {
+		color: #fff;
+		stroke: #000;
+	}
+
+	.wp-social-link-soundcloud {
+		color: #ff5500;
+	}
+
+	.wp-social-link-spotify {
+		color: #1db954;
+	}
+
+	.wp-social-link-tumblr {
+		color: #001935;
+	}
+
+	.wp-social-link-twitch {
+		color: #9146ff;
+	}
+
+	.wp-social-link-twitter {
+		color: #1da1f3;
+	}
+
+	.wp-social-link-vimeo {
+		color: #1ab7ea;
+	}
+
+	.wp-social-link-vk {
+		color: #4680c2;
+	}
+
+	.wp-social-link-wordpress {
+		color: #585c60;
+	}
+
+	.wp-social-link-yelp {
+		background-color: #db212a;
+		color: #fff;
+	}
+
+	.wp-social-link-youtube {
+		color: #ff0000;
+	}
+}
+
+// Treatment for pill shape style.
+.wp-block-social-links.is-style-pill-shape {
+	.wp-social-link {
+		border-radius: px-to-rem(36);
+		width: auto;
+	}
+
+	.wp-social-link a {
+		padding-left: px-to-rem(16);
+		padding-right: px-to-rem(16);
+
+		&:focus {
+			border-radius: px-to-rem(36);
+		}
+	}
+}

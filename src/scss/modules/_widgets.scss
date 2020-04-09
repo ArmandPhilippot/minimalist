@@ -1,0 +1,140 @@
+.widget-title {
+	font-size: $widget-title-font-size;
+}
+
+.widget {
+	margin: 0 0 $spacing_size-md;
+
+	ul {
+		@include list-reset;
+
+		li {
+			border-top: px-to-rem(1) solid $widget-li-border-color;
+			border-bottom: px-to-rem(1) solid $widget-li-border-color;
+			padding: $spacing_size-xs 0;
+
+			+ li {
+				margin-top: px-to-rem(1) * -1;
+			}
+
+			.children {
+				margin-top: $spacing_size-xs;
+				padding-left: $spacing_size-sm;
+
+				li:last-of-type {
+					border-bottom: none;
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+
+	select {
+		width: 100%;
+	}
+}
+
+/* Widget Recent Entries */
+.widget_recent_entries .post-date {
+	color: $widget-meta-color;
+	display: block;
+	font-size: $widget-meta-font-size;
+}
+
+/* Widget Calendar */
+.widget_calendar {
+	table {
+		width: 100%;
+	}
+
+	caption {
+		background-color: $widget-calendar-caption-background-color;
+		border: px-to-rem(1) solid $widget-calendar-border-color;
+		border-bottom: none;
+		font-variant: small-caps;
+		font-weight: 400;
+		padding: $spacing_size-xxs 0;
+		text-transform: capitalize;
+	}
+
+	tbody td,
+	th {
+		padding: $spacing_size-xxs $spacing_size-xs;
+		text-align: center;
+		border: px-to-rem(1) solid $widget-calendar-border-color;
+	}
+
+	tfoot {
+		border: px-to-rem(1) solid $widget-calendar-border-color;
+
+		td {
+			border: none;
+		}
+	}
+}
+
+/* Widget Nav Menu */
+.widget_nav_menu {
+	.submenu-toggle {
+		display: none;
+	}
+
+	.sub-menu {
+		margin-top: $spacing_size-xs;
+		padding-left: $spacing_size-sm;
+
+		li:last-of-type {
+			border-bottom: none;
+			padding-bottom: 0;
+		}
+	}
+}
+
+/* Widget RSS */
+.widget_rss {
+	.rss-date {
+		display: block;
+		color: $widget-meta-color;
+		font-size: $widget-meta-font-size;
+		text-transform: capitalize;
+		margin: $spacing_size-xs 0;
+	}
+
+	.rssSummary {
+		font-size: $font_size-base-rem;
+		margin: $spacing_size-xxs 0 $spacing_size-sm;
+	}
+
+	cite {
+		font-size: $font_size-base-rem;
+	}
+}
+
+/* Widget Image */
+.widget_media_image {
+	a {
+		display: block;
+
+		&:focus {
+			background: none;
+		}
+	}
+}
+
+/* Widget Audio & Video */
+.widget_media_audio,
+.widget_media_video {
+	button {
+		background: transparent;
+		border-radius: 0;
+		box-shadow: none;
+		text-shadow: none;
+		left: auto;
+		top: auto;
+
+		&:active {
+			left: auto;
+			top: auto;
+		}
+	}
+}

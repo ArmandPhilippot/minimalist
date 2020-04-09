@@ -1,0 +1,35 @@
+a.more-link {
+	display: inline-block;
+	background: $more-link-background-color;
+	border: px-to-rem(1) solid $more-link-border-color;
+	border-radius: px-to-rem(2);
+	padding: $spacing_size-sm $spacing_size-sm;
+	margin: 0 px-to-rem(3) $spacing_size-sm 0;
+
+	@include mediaq(screen, 80em) {
+		padding: $spacing_size-xxs $spacing_size-sm;
+	}
+
+	&:hover {
+		background: $more-link-hover-background-color;
+		color: $more-link-hover-color;
+		text-decoration: none;
+	}
+
+	&:focus {
+		background: $more-link-focus-background-color;
+		color: $more-link-focus-color;
+	}
+
+	&:active {
+		background: $more-link-active-background-color;
+		color: $more-link-active-color;
+	}
+
+	&::after {
+		content: '\2192';
+		margin-left: $spacing_size-xxs;
+		position: relative;
+		top: px-to-rem(2) * -1;
+	}
+}

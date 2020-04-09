@@ -1,0 +1,7 @@
+.wp-block-quote {
+	&.is-style-large {
+		border: none;
+		padding: 0;
+		font-size: $font_size-lg;
+	}
+}

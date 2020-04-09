@@ -1,0 +1,264 @@
+//==============================================================================
+// Theme Information
+//==============================================================================
+$theme_name: 'Minimalist';
+$theme_uri: 'https://github.com/ArmandPhilippot/minimalist';
+$theme_description: 'A minimalist WordPress Theme.';
+$theme_version: '1.0.0';
+$theme_author: 'Armand Philippot';
+$theme_author-uri: 'https://www.armandphilippot.com/';
+$theme_license: 'GNU General Public License v2 or later';
+$theme_license-uri: 'http://www.gnu.org/licenses/gpl-2.0.html';
+$theme_domain: 'Minimalist';
+$theme_domain-path: '/languages/';
+$theme_tags: 'one-column, two-columns, right-sidebar, custom-background, custom-logo, custom-menu, editor-style, responsive-layout, footer-widgets, sticky-post, translation-ready, accessibility-ready, block-styles, wide-blocks';
+
+//=============================================================================
+// Containers
+//=============================================================================
+$container_xs: 800;
+$container_sm: 900;
+$container_md: 1000;
+$container_lg: 1200;
+$container_xl: 1300;
+$container_xxl: 1400;
+
+//=============================================================================
+// Fonts
+//=============================================================================
+$font_body: (Arial, 'Liberation Sans', sans-serif);
+$font_mono: ('Courier New', Courier, monospace);
+
+$font_size-base: 17px;
+$font_size-base-rem: 1.0625rem;
+$font_size-ratio: 1.125;
+
+$font_size-xs: 1rem / (1.15 * $font_size-ratio);
+$font_size-sm: 1rem / $font_size-ratio;
+$font_size-md: 1rem * (1 * $font_size-ratio);
+$font_size-lg: $font_size-base-rem * $font_size-ratio;
+$font_size-xl: $font_size-base-rem * (1.15 * $font_size-ratio);
+$font_size-xxl: $font_size-base-rem * (1.3 * $font_size-ratio);
+$font_size-xxxl: $font_size-base-rem * (1.45 * $font_size-ratio);
+$font_size-xxxxl: $font_size-base-rem * (1.7 * $font_size-ratio);
+$font_size-xxxxxl: $font_size-base-rem * (1.9 * $font_size-ratio);
+$font_size-xxxxxxl: $font_size-base-rem * (2.1 * $font_size-ratio);
+
+//==============================================================================
+// Spacing : padding, margin...
+//==============================================================================
+$spacing_initial: 1;
+$spacing_golden-number: 1.618;
+
+// Spacing sizes
+$spacing_size-xxxs: $spacing_golden-number / 5 * 1rem;
+$spacing_size-xxs: $spacing_golden-number / 4 * 1rem;
+$spacing_size-xs: $spacing_golden-number / 3 * 1rem;
+$spacing_size-sm: $spacing_golden-number / 2 * 1rem;
+$spacing_size-md: $spacing_golden-number * 1rem;
+$spacing_size-lg: $spacing_golden-number * 1.5 * 1rem;
+$spacing_size-xl: $spacing_golden-number * 2 * 1rem;
+$spacing_size-xxl: $spacing_golden-number * 2.5 * 1rem;
+$spacing_size-xxxl: $spacing_golden-number * 3 * 1rem;
+
+//==============================================================================
+// Colors
+//==============================================================================
+$color_white: #fff;
+$color_black: #000;
+$color_toryblue: #1450aa;
+$color_shark: #25272c;
+$color_pickled-bluewood: #314459;
+$color_nevada: #646e75;
+$color_double-pearl-lusta: #fcf4d0;
+$color_gainsboro: #dcdcdc;
+$color_gallery: #efefef;
+
+//==============================================================================
+// Variables assignation
+//==============================================================================
+// Primary colors
+$primary-color: $color_toryblue;
+$primary-color-light: lighten($primary-color, 5%);
+$primary-color-lighter: lighten($primary-color, 10%);
+$primary-color-dark: darken($primary-color, 5%);
+$primary-color-darker: darken($primary-color, 10%);
+
+// Line height
+$line-height: $spacing_golden-number;
+$line-height-initial: $spacing_initial;
+
+// Body
+$body-background: $color_white;
+$body-text-color: $color_black;
+
+// Phrasing
+$mark-background-color: $color_double-pearl-lusta;
+
+// Header
+$site-title-hover-color: $primary-color-lighter;
+$site-title-focus-color: $color_white;
+$site-title-active-color: $primary-color-darker;
+
+// Main
+$post-sticky-background-color: $color_gallery;
+
+// Footer
+$footer-border-color: $color_gallery;
+$footer-sep-color: $color_nevada;
+
+// Accessibility
+$screen-reader-background-color: $primary-color;
+$screen-reader-border-color: $color_white;
+$screen-reader-color: $color_white;
+
+// Links
+$links-color: $primary-color;
+$links-hover-color: $primary-color-light;
+$links-focus-color: $color_white;
+$links-focus-background: $primary-color-light;
+$links-active-color: $primary-color-dark;
+$links-visited-color: $primary-color;
+
+// Media
+$media-link-focus-outline-color: $primary-color;
+$figure-caption-background-color: $color_shark;
+$figure-caption-color: $color_white;
+
+// Tables
+$table-border-color: $primary-color-darker;
+$table-th-background-color: $primary-color-dark;
+$table-th-color: $color_white;
+$table-tr-2n-background-color: lighten($primary-color, 57%);
+
+// Forms
+$input-border-color: $primary-color-darker;
+$input-focus-border-color: $primary-color;
+$input-focus-shadow-color: $primary-color-darker;
+$select-border-color: $primary-color-darker;
+$button-background-color: $primary-color;
+$button-color: $color_white;
+$button-shadow-color: $primary-color-dark;
+$button-hover-background-color: $primary-color-light;
+$button-focus-background-color: $primary-color-light;
+$button-active-background-color: $primary-color-dark;
+
+// Search
+$search-button-background-color: $color_white;
+$search-button-border-color: $primary-color;
+$search-button-hover-background-color: $primary-color-light;
+$search-button-active-background-color: $primary-color-dark;
+
+// Preformat
+$code-background-color: $color_gainsboro;
+$pre-code-background-color: $color_shark;
+$pre-code-color: $color_gallery;
+$pre-border-color: $color_gainsboro;
+
+// Blockquotes
+$blockquote-border-color: $primary-color;
+
+// Navigation
+$main-nav-border-color: $color_gainsboro;
+$main-nav-link-background-color: $color_gallery;
+$main-nav-lg-link-background-color: transparent;
+$main-nav-link-border-color: $color_white;
+$main-nav-link-color: $primary-color;
+$main-nav-link-hover-background-color: $primary-color;
+$main-nav-link-hover-color: $color_white;
+$main-nav-lg-link-hover-background-color: transparent;
+$main-nav-lg-link-hover-color: $primary-color-lighter;
+$main-nav-link-focus-background-color: $primary-color;
+$main-nav-link-focus-color: $color_white;
+$main-nav-lg-link-focus-border-color: $primary-color-darker;
+$main-nav-link-active-background-color: $primary-color-dark;
+$main-nav-link-active-color: $color_white;
+$main-nav-lg-link-active-background-color: transparent;
+$main-nav-lg-link-active-color: $primary-color-dark;
+$main-nav-focus-within-background-color: $primary-color-darker;
+$main-nav-focus-within-link-color: $color_white;
+$main-nav-link-current-color: $primary-color;
+$main-nav-after-border-color: $color_gallery;
+$main-nav-submenu-background-color: $color_white;
+
+// Pagination
+$nav-links-background-color: $color_white;
+$nav-links-border-color: $primary-color;
+$nav-links-hover-background-color: $primary-color;
+$nav-links-hover-color: $color_white;
+$nav-links-focus-background-color: $primary-color;
+$nav-links-focus-color: $color_white;
+$nav-links-active-background-color: $primary-color-dark;
+$nav-links-active-color: $color_white;
+$nav-links-current-color: $primary-color-darker;
+
+// More Link
+$more-link-background-color: $color_white;
+$more-link-border-color: $primary-color;
+$more-link-hover-background-color: $primary-color;
+$more-link-hover-color: $color_white;
+$more-link-focus-background-color: $primary-color;
+$more-link-focus-color: $color_white;
+$more-link-active-background-color: $primary-color-dark;
+$more-link-active-color: $color_white;
+
+// Toggle buttons
+$main-nav-toggle-color: $primary-color;
+$main-nav-toggle-hover-color: $color_white;
+$main-nav-toggle-focus-color: $color_white;
+$main-nav-toggle-active-color: $color_white;
+$main-nav-toggle-background-color: $color_white;
+$main-nav-toggle-hover-background-color: $primary-color-light;
+$main-nav-toggle-focus-background-color: $primary-color-light;
+$main-nav-toggle-active-background-color: $primary-color-dark;
+$main-nav-plus-minus-background-color: $color_gallery;
+$main-nav-lg-plus-minus-background-color: $color_white;
+
+// Comment List
+$comment-author-color: $color_shark;
+$comment-border-color: $color_gainsboro;
+
+// Comment Reply Link
+$comment-reply-link-border-color: $primary-color;
+$comment-reply-link-hover-background-color: $primary-color;
+$comment-reply-link-hover-color: $color_white;
+$comment-reply-link-focus-background-color: $primary-color;
+$comment-reply-link-focus-color: $color_white;
+$comment-reply-link-active-background-color: $primary-color-dark;
+$comment-reply-link-active-color: $color_white;
+
+// Comment Form
+$comment-form-cookies-consent-font-size: $font_size-sm;
+$comment-form-required-color: $primary-color;
+$comment-form-label-color: $color_pickled-bluewood;
+$comment-form-label-font-size: $font_size-sm;
+$comment-form-allowed-tags-color: $color_nevada;
+$comment-form-allowed-tags-font-size: $font_size-xs;
+
+// Galleries
+$gallery-caption-color: $color_white;
+$gallery-figure-caption-background-color: $color_white;
+$gallery-figure-caption-border-color: $primary-color-dark;
+$gallery-figure-caption-color: $color_black;
+
+// Widgets
+$widget-title-font-size: $font_size-xl;
+$widget-li-border-color: $color_gainsboro;
+$widget-meta-color: $color_pickled-bluewood;
+$widget-meta-font-size: $font_size-sm;
+$widget-calendar-border-color: $color_gainsboro;
+$widget-calendar-caption-background-color: $color_gallery;
+
+// Blocks
+$block-meta-color: $color_nevada;
+$block-meta-font-size: $font_size-sm;
+$block-cover-background-color: $color_black;
+$block-cover-inner-color: $color_white;
+$block-button-outlined-color: $color_shark;
+$block-button-outlined-hover-color: $color_black;
+$block-button-outlined-focus-color: $color_black;
+$block-grid-border-color: $color_gainsboro;
+$block-table-subtle-light-gray: #f3f4f5;
+$block-table-subtle-pale-green: #e9fbe5;
+$block-table-subtle-pale-blue: #e7f5fe;
+$block-table-subtle-pale-pink: #fcf0ef;

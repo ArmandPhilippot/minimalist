@@ -1,0 +1,23 @@
+p {
+	margin: 0 0 $spacing_size-md;
+}
+
+b,
+strong {
+	font-weight: 600;
+}
+
+cite,
+dfn,
+em,
+i {
+	font-style: italic;
+}
+
+small {
+	font-size: $font_size-sm;
+}
+
+mark {
+	background: $mark-background-color;
+}

@@ -1,0 +1,19 @@
+blockquote {
+	border-left: px-to-rem(3) solid $blockquote-border-color;
+	font-style: italic;
+	margin: $spacing_size-md;
+	padding: $spacing_size-xxxs 0 $spacing_size-xxs $spacing_size-md;
+	position: relative;
+
+	p:last-child {
+		margin: 0;
+	}
+
+	cite {
+		font-style: normal;
+
+		&::before {
+			content: '\2014 \2009';
+		}
+	}
+}

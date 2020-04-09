@@ -1,0 +1,12 @@
+.wp-block-audio {
+	margin-bottom: $spacing_size-md;
+
+	&.alignleft,
+	&.alignright {
+		margin-bottom: $spacing_size-xxs;
+	}
+
+	audio {
+		width: 100%;
+	}
+}

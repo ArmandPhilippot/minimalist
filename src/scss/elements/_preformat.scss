@@ -1,0 +1,37 @@
+code,
+kbd,
+pre,
+tt,
+var {
+	font-family: $font_mono;
+}
+
+pre {
+	display: block;
+	hyphens: none;
+	line-height: $line-height-initial;
+	margin-bottom: $spacing_size-md;
+	max-width: 100%;
+	overflow: auto;
+	white-space: pre;
+	word-break: normal;
+}
+
+code {
+	background: $code-background-color;
+	box-decoration-break: clone;
+	padding: px-to-rem(2) px-to-rem(5) 0;
+	border-radius: px-to-rem(3);
+	word-wrap: break-word;
+}
+
+pre code {
+	background: inherit;
+	color: $pre-code-color;
+	display: block;
+	padding: 0;
+	border-radius: 0;
+	line-height: $line-height;
+	tab-size: 2;
+	word-wrap: normal;
+}

@@ -1,0 +1,149 @@
+/*
+ * Theme Name: Minimalist
+ * Adding print support. The print styles are based on the the great work of Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272/.
+ */
+/*==============================================================================
+ *>>> TABLE OF CONTENTS:
+ *==============================================================================
+ *# Margins, paddings & width
+ *# Page breaks
+ *# Links
+ *# Visibility
+ *============================================================================*/
+@media print {
+	/* Margins */
+	@page {
+		margin: 2cm;
+	}
+
+	@page :left {
+		margin: 4cm;
+	}
+
+	@page :right {
+		margin: 4cm;
+	}
+
+	.post,
+	.page {
+		-webkit-column-gap: 3em;
+		-moz-column-gap: 3em;
+		column-gap: 3em;
+		-webkit-column-width: 17em;
+		-moz-column-width: 17em;
+		column-width: 17em;
+	}
+
+	ul,
+	ol {
+		margin-bottom: 1.618rem;
+	}
+
+	/* Fonts */
+	body {
+		background: #fff !important;
+		color: #000;
+		font: 13pt Georgia, 'Times New Roman', Times, serif;
+		line-height: 1.3;
+	}
+	h1 {
+		font-size: 24pt;
+	}
+	h2 {
+		font-size: 20pt;
+	}
+	h3 {
+		font-size: 17pt;
+	}
+	h4 {
+		font-size: 14pt;
+		font-weight: normal;
+	}
+
+	/* Page breaks */
+	a {
+		page-break-inside: avoid;
+	}
+	blockquote {
+		page-break-inside: avoid;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		page-break-after: avoid;
+		page-break-inside: avoid;
+	}
+	img {
+		page-break-after: avoid;
+		page-break-inside: avoid;
+	}
+	table,
+	pre {
+		page-break-inside: avoid;
+	}
+	ul,
+	ol,
+	dl {
+		page-break-before: avoid;
+	}
+	p {
+		orphans: 2;
+		widows: 2;
+	}
+
+	/* Links */
+	a:link,
+	a:visited,
+	a {
+		background: transparent;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	a {
+		page-break-inside: avoid;
+	}
+	a[href^='http']::after,
+	a[href^='https']::after,
+	a[href^='mailto']::after,
+	a[href^='tel']::after {
+		content: '\000020<‎\0000A0'attr(href) '‎\0000A0>\000020';
+	}
+	a::after > img {
+		content: '';
+	}
+	article a[href^='#']::after,
+	a[href^='javascript:']::after {
+		content: '';
+	}
+	a:not(:local-link)::after {
+		content: '\000020<‎\0000A0'attr(href) '‎\0000A0>\000020';
+	}
+
+	/* Hiding unnecessary elements */
+	.navigation-top,
+	.top-nav-label,
+	.header-container input[type='checkbox'],
+	.site-footer,
+	.sidebar,
+	.navigation,
+	.comments-area {
+		display: none;
+	}
+
+	blockquote {
+		margin: 0 0 1.618rem;
+
+		p {
+			&::before {
+				content: '"';
+			}
+
+			&::after {
+				content: '"';
+			}
+		}
+	}
+}

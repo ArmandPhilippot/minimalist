@@ -1,0 +1,43 @@
+.wp-block-calendar {
+	text-align: center;
+	margin-bottom: $spacing_size-md;
+
+	&.alignleft,
+	&.alignright {
+		margin-bottom: $spacing_size-xxs;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+
+		caption {
+			background-color: $widget-calendar-caption-background-color;
+			border: px-to-rem(1) solid $widget-calendar-border-color;
+			border-bottom: none;
+			font-variant: small-caps;
+			padding: $spacing_size-xxs 0;
+			text-transform: capitalize;
+		}
+
+		th {
+			background: $table-th-background-color;
+			color: $table-th-color;
+		}
+	}
+
+	tbody td,
+	th {
+		padding: px-to-rem(4);
+		text-align: center;
+		border: px-to-rem(1) solid $widget-calendar-border-color;
+	}
+
+	tfoot {
+		border: px-to-rem(1) solid $widget-calendar-border-color;
+
+		td {
+			border: none;
+		}
+	}
+}

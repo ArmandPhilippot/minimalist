@@ -1,0 +1,17 @@
+# Numerous always-ignore extensions
+*.log
+*~
+
+# OS or Editor folders
+.DS_Store
+Thumbs.db
+.Trashes
+
+# Packages folders
+node_modules
+vendor
+
+# Files to ignore
+*.map
+package-lock.json
+composer.lock

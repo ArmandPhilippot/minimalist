@@ -1,0 +1,10 @@
+ul,
+ol {
+	margin: 0 0 $spacing_size-md;
+	padding: 0 0 0 $spacing_size-md;
+
+	ul,
+	ol {
+		margin: 0;
+	}
+}

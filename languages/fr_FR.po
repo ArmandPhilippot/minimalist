@@ -1,0 +1,222 @@
+# Copyright (C) 2020 Minimalist
+# This file is distributed under the same license as the Minimalist package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Minimalist\n"
+"Report-Msgid-Bugs-To: https://github.com/ArmandPhilippot/minimalist/issues\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Armand Philippot <contact@armandphilippot.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: archive.php:28, author.php:36, category.php:31, comments.php:62,
+#: date.php:28, index.php:36, search.php:28, tag.php:31
+msgid "Previous"
+msgstr "Précédent"
+
+#: archive.php:29, author.php:37, category.php:32, comments.php:63,
+#: date.php:29, index.php:37, search.php:29, tag.php:32
+msgid "Next"
+msgstr "Suivant"
+
+#: author.php:22
+msgid "Website:"
+msgstr "Site web :"
+
+#. translators: %s: post title.
+#: comments.php:27
+msgctxt "comments title"
+msgid "One reply to &ldquo;%s&rdquo;"
+msgstr "Une réponse à &ldquo;%s&rdquo;"
+
+#: comments.php:53
+msgid "Reply"
+msgstr "Répondre"
+
+#: comments.php:69
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: functions.php:109
+msgid "Small"
+msgstr "Petit"
+
+#: functions.php:110
+msgid "S"
+msgstr "S"
+
+#: functions.php:115
+msgid "Normal"
+msgstr "Normal"
+
+#: functions.php:116
+msgid "M"
+msgstr "M"
+
+#: functions.php:121
+msgid "Large"
+msgstr "Large"
+
+#: functions.php:122
+msgid "L"
+msgstr "L"
+
+#: functions.php:127
+msgid "Huge"
+msgstr "Énorme"
+
+#: functions.php:128
+msgid "XL"
+msgstr "XL"
+
+#: functions.php:141, template-parts/header/navigation-top.php:18
+msgid "Primary Menu"
+msgstr "Menu principal"
+
+#: functions.php:142
+msgid "Footer Menu"
+msgstr "Menu du pied de page"
+
+#: functions.php:158
+msgid "Sidebar"
+msgstr "Barre latérale"
+
+#: functions.php:160
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+"Ajouter des widgets ici pour les faire apparaître dans la barre latérale."
+
+#: functions.php:169
+msgid "Footer"
+msgstr "Pied de page"
+
+#: functions.php:171
+msgid "Add widgets here to appear in your footer."
+msgstr ""
+"Ajouter des widgets ici pour les faire apparaître dans le pied de page."
+
+#: header.php:22
+msgid "Skip to content"
+msgstr "Aller au contenu"
+
+#. translators: %s: search query.
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr "Résultats de la recherche pour : %s"
+
+#: searchform.php:22
+msgid "Search for:"
+msgstr "Rechercher :"
+
+#: searchform.php:23
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Rechercher&hellip;"
+
+#: searchform.php:26
+msgctxt "submit button"
+msgid "Search"
+msgstr "Rechercher"
+
+#: inc/template-functions.php:44
+msgid "Open submenu"
+msgstr "Ouvrir le sous-menu"
+
+#: inc/template-functions.php:44
+msgid "Close submenu"
+msgstr "Fermer le sous-menu"
+
+#. translators: %s: Name of current post.
+#. translators: %s: Name of current post.
+#: inc/template-functions.php:61, inc/template-functions.php:80
+msgid "Continue reading %s"
+msgstr "Lire la suite %s"
+
+#. translators: Copyright date format, see https://secure.php.net/date
+#: template-parts/footer/credits.php:15
+msgctxt "copyright date format"
+msgid "Y"
+msgstr "Y"
+
+#: template-parts/footer/credits.php:36
+msgid "Footer Links"
+msgstr "Liens du pied de page"
+
+#: template-parts/footer/credits.php:49
+msgid "Theme by"
+msgstr "Thème par"
+
+#: template-parts/footer/credits.php:51
+msgid "Back to top"
+msgstr "Retour en haut de page"
+
+#. translators: %s: HTML character for up arrow.
+#: template-parts/footer/credits.php:54
+msgid "Up %s"
+msgstr "Haut %s"
+
+#: template-parts/header/navigation-top.php:14
+msgid "Open menu"
+msgstr "Ouvrir le menu"
+
+#: template-parts/header/navigation-top.php:15
+msgid "Close menu"
+msgstr "Fermer le menu"
+
+#: template-parts/page/content.php:29, template-parts/post/content.php:33
+msgid "Page"
+msgstr "Page"
+
+#: template-parts/page/content.php:29, template-parts/post/content.php:33
+msgid "Pages:"
+msgstr "Pages :"
+
+#: template-parts/post/content-none.php:16
+msgid "Nothing Found"
+msgstr "Aucun résultat"
+
+#. translators: %1$s: URL to publish post.
+#: template-parts/post/content-none.php:25
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Prêt à publier votre premier article ? <a href=\"%1$s\">Commencez ici</a>."
+
+#~ msgctxt "comments title"
+#~ msgid "%1$s reply to &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s replies to &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "%1$s réponse à &ldquo;%2$s&rdquo;"
+#~ msgstr[1] "%1$s réponses à &ldquo;%2$s&rdquo;"
+
+#~ msgid "Posts"
+#~ msgstr "Articles"
+
+#~ msgid ""
+#~ "Sorry, but nothing matched your search terms. Please try again with some "
+#~ "different keywords."
+#~ msgstr ""
+#~ "Désolé, mais rien ne correspond à votre recherche. Veuillez réessayer "
+#~ "avec des mots-clés différents."
+
+#~ msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+#~ msgstr "Lire la suite<span class=\"screen-reader-text\"> de \"%s\"</span>"
+
+#~ msgid ""
+#~ "It seems we can't find what you're looking for. Perhaps searching can "
+#~ "help."
+#~ msgstr ""
+#~ "Il semblerait que nous ne pouvons trouver ce que vous cherchez. Une "
+#~ "recherche pourrait vous être utile."

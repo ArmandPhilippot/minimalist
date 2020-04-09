@@ -1,0 +1,401 @@
+.main-navigation {
+	display: none;
+
+	@include mediaq(screen, 64em) {
+		display: block;
+	}
+
+	ul {
+		@include list-reset;
+		text-align: left;
+	}
+
+	.menu {
+		border: px-to-rem(1) solid $main-nav-border-color;
+		position: relative;
+		width: 100%;
+
+		@include mediaq(screen, 64em) {
+			border: none;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: flex-end;
+		}
+
+		&::before {
+			border-bottom: px-to-rem(9) solid $main-nav-border-color;
+			border-left: px-to-rem(9) solid transparent;
+			border-right: px-to-rem(9) solid transparent;
+			border-top: 0 solid $main-nav-border-color;
+			content: '';
+			position: absolute;
+			right: px-to-rem(22);
+			top: px-to-rem(9) * -1;
+
+			@include mediaq(screen, 64em) {
+				display: none;
+			}
+		}
+
+		&::after {
+			border-color: $main-nav-after-border-color transparent;
+			border-style: solid;
+			border-width: 0 px-to-rem(8) px-to-rem(8);
+			content: '';
+			position: absolute;
+			right: px-to-rem(23);
+			top: px-to-rem(7) * -1;
+
+			@include mediaq(screen, 64em) {
+				display: none;
+			}
+		}
+
+		> .menu-item,
+		> .page_item {
+			position: relative;
+
+			@include mediaq(screen, 64em) {
+				margin-right: px-to-rem(2);
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			> a {
+				@include mediaq(screen, 64em) {
+					font-weight: 600;
+				}
+
+				&:hover {
+					@include mediaq(screen, 64em) {
+						text-decoration: none;
+
+						&::before {
+							background: $main-nav-lg-link-hover-color;
+							border-top-left-radius: px-to-rem(3);
+							border-top-right-radius: px-to-rem(3);
+							content: '';
+							display: block;
+							height: px-to-rem(3);
+							width: 70%;
+							position: absolute;
+							bottom: 0;
+							left: 15%;
+						}
+					}
+				}
+
+				&:focus {
+					@include mediaq(screen, 64em) {
+						text-decoration: none;
+
+						&::before {
+							background: $main-nav-lg-link-focus-border-color;
+							border-top-left-radius: px-to-rem(3);
+							border-top-right-radius: px-to-rem(3);
+							content: '';
+							display: block;
+							height: px-to-rem(3);
+							width: 100%;
+							position: absolute;
+							bottom: 0;
+							left: 0;
+						}
+					}
+				}
+
+				&:active {
+					@include mediaq(screen, 64em) {
+						text-decoration: none;
+
+						&::before {
+							background: $main-nav-lg-link-active-color;
+							border-top-left-radius: px-to-rem(3);
+							border-top-right-radius: px-to-rem(3);
+							content: '';
+							display: block;
+							height: px-to-rem(3);
+							width: 70%;
+							position: absolute;
+							bottom: 0;
+							left: 15%;
+						}
+					}
+				}
+			}
+
+			a {
+				border: px-to-rem(1) solid $main-nav-link-border-color;
+				display: block;
+				background: $main-nav-link-background-color;
+				padding: $spacing_size-sm $spacing_size-md;
+
+				@include mediaq(screen, 64em) {
+					background: $main-nav-lg-link-background-color;
+					border: none;
+					padding: $spacing_size-xs $spacing_size-sm;
+				}
+
+				&:hover {
+					background: $main-nav-link-hover-background-color;
+					color: $main-nav-link-hover-color;
+
+					@include mediaq(screen, 64em) {
+						background: $main-nav-lg-link-hover-background-color;
+						color: $main-nav-lg-link-hover-color;
+					}
+				}
+
+				&:focus {
+					background: $main-nav-link-focus-background-color;
+					color: $main-nav-link-focus-color;
+				}
+
+				&:active {
+					background: $main-nav-link-active-background-color;
+					color: $main-nav-link-active-color;
+
+					@include mediaq(screen, 64em) {
+						background: $main-nav-lg-link-active-background-color;
+						color: $main-nav-lg-link-active-color;
+
+						&::before {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		> .current_page_item > a {
+			text-decoration: underline;
+
+			@include mediaq(screen, 64em) {
+				text-decoration: none;
+
+				&::before {
+					background: $main-nav-link-current-color;
+					border-top-left-radius: px-to-rem(3);
+					border-top-right-radius: px-to-rem(3);
+					bottom: 0;
+					content: '';
+					display: block;
+					height: px-to-rem(3);
+					left: 15%;
+					position: absolute;
+					width: 70%;
+				}
+			}
+		}
+
+		.menu-item-has-children,
+		.page_item_has_children {
+			position: relative;
+
+			&:hover > a {
+				@include mediaq(screen, 64em) {
+					background: $main-nav-lg-link-background-color;
+				}
+			}
+
+			&:focus-within > a {
+				background: $main-nav-focus-within-background-color;
+				color: $main-nav-focus-within-link-color;
+			}
+
+			&:focus > a {
+				background: $main-nav-link-focus-background-color;
+				color: $main-nav-link-focus-color;
+			}
+
+			/* Same rules - Focus-within not supported by Edge/IE. Unsupported selectors cause the entire block to be ignored, so we must repeat all styles separately. */
+			&:focus-within > a:focus {
+				background: $main-nav-link-focus-background-color;
+				color: $main-nav-link-focus-color;
+			}
+
+			&:active > a {
+				background: $main-nav-link-active-background-color;
+				color: $main-nav-link-active-color;
+
+				@include mediaq(screen, 64em) {
+					background: $main-nav-lg-link-active-background-color;
+					color: $main-nav-lg-link-active-color;
+				}
+			}
+
+			/* Same rules - Focus-within not supported by Edge/IE. Unsupported selectors cause the entire block to be ignored, so we must repeat all styles separately. */
+			&:focus-within > a:active {
+				background: $main-nav-link-active-background-color;
+				color: $main-nav-link-active-color;
+
+				@include mediaq(screen, 64em) {
+					background: $main-nav-lg-link-active-background-color;
+					color: $main-nav-lg-link-active-color;
+				}
+			}
+
+			> a {
+				padding: $spacing_size-sm px-to-rem(55) $spacing_size-sm
+					$spacing_size-md;
+
+				@include mediaq(screen, 64em) {
+					padding: $spacing_size-xs $spacing_size-sm;
+				}
+
+				@include mediaq(screen, 64em, null, coarse) {
+					padding: $spacing_size-xs px-to-rem(52) $spacing_size-xs
+						$spacing_size-sm;
+				}
+
+				&::after {
+					@include mediaq(screen, null, null, fine) {
+						content: '\25BC';
+						display: inline-block;
+						margin-left: $spacing_size-xxs;
+						text-decoration: none;
+						position: relative;
+					}
+				}
+			}
+		}
+	}
+
+	.sub-menu,
+	.children {
+		background: $color_white;
+		border-left: px-to-rem(3) solid $main-nav-border-color;
+		border-right: px-to-rem(3) solid $main-nav-border-color;
+		display: none;
+
+		@include mediaq(screen, 64em) {
+			position: absolute;
+			border: px-to-rem(1) solid $main-nav-border-color;
+			min-width: 100%;
+
+			&::before {
+				border-bottom: px-to-rem(9) solid $main-nav-border-color;
+				border-left: px-to-rem(9) solid transparent;
+				border-right: px-to-rem(9) solid transparent;
+				border-top: 0 solid $main-nav-border-color;
+				content: '';
+				position: absolute;
+				left: 30%;
+				top: px-to-rem(9) * -1;
+			}
+
+			&::after {
+				border-color: $color_white transparent;
+				border-style: solid;
+				border-width: 0 px-to-rem(8) px-to-rem(8);
+				content: '';
+				position: absolute;
+				left: calc(30% + 1px);
+				top: px-to-rem(7) * -1;
+			}
+		}
+
+		> .menu-item,
+		> .page_item {
+			a {
+				@include mediaq(screen, 64em) {
+					min-width: 100%;
+					white-space: nowrap;
+				}
+
+				@include mediaq(screen, 64em, null, coarse) {
+					padding: $spacing_size-xs $spacing_size-xl $spacing_size-xs
+						$spacing_size-sm;
+				}
+			}
+
+			ul {
+				@include mediaq(screen, 64em) {
+					left: -100%;
+					top: 0;
+					max-width: 100%;
+
+					&::before,
+					&::after {
+						border: none;
+					}
+				}
+
+				@include mediaq(screen, 90em) {
+					left: 100%;
+				}
+
+				a {
+					@include mediaq(screen, 64em) {
+						white-space: normal;
+					}
+				}
+			}
+		}
+
+		> .current_page_item > a {
+			text-decoration: underline;
+		}
+
+		.menu-item-has-children,
+		.page_item_has_children {
+			> a {
+				padding: $spacing_size-sm px-to-rem(55) $spacing_size-sm
+					$spacing_size-md;
+
+				@include mediaq(screen, 64em) {
+					padding: $spacing_size-xs $spacing_size-sm;
+				}
+
+				@include mediaq(screen, 64em, null, coarse) {
+					padding: $spacing_size-xs px-to-rem(52) $spacing_size-xs
+						$spacing_size-sm;
+				}
+
+				&::after {
+					@include mediaq(screen, null, null, fine) {
+						content: '\25BA';
+						display: inline-block;
+						margin-left: $spacing_size-xxs;
+						text-decoration: none;
+						position: relative;
+						vertical-align: top;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Hide/Show Main Menu if checkbox unchecked/checked */
+.header-container > [type='checkbox']:checked ~ .main-navigation {
+	display: block;
+}
+
+/* Hide/Show Sub-Menu if checkbox unchecked/checked */
+.main-navigation [type='checkbox']:checked ~ ul {
+	display: block;
+}
+
+.main-navigation .menu-item-has-children:hover > a ~ ul,
+.main-navigation .page_item_has_children:hover > a ~ ul {
+	@include mediaq(screen, 64em) {
+		z-index: 999;
+	}
+	@include mediaq(screen, 64em, null, fine) {
+		display: block;
+	}
+}
+
+/* Same rules - Focus-within not supported by Edge/IE. Unsupported selectors cause the entire block to be ignored, so we must repeat all styles separately. */
+.main-navigation .menu-item-has-children:focus-within > a ~ ul,
+.main-navigation .page_item_has_children:focus-within > a ~ ul {
+	@include mediaq(screen, 64em) {
+		z-index: 999;
+	}
+	@include mediaq(screen, 64em, null, fine) {
+		display: block;
+	}
+}

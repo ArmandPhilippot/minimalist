@@ -1,0 +1,42 @@
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+	box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value.
+ */
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+body {
+	background: $body-background;
+	color: $body-text-color;
+	font-family: $font_body;
+	font-size: $font_size-base;
+	font-size: $font_size-base-rem;
+	line-height: $line-height;
+
+	@include mediaq(screen, 64em) {
+		font-size: $font_size-base-rem + 0.01;
+	}
+
+	@include mediaq(screen, 80em) {
+		font-size: $font_size-base-rem + 0.05;
+	}
+
+	@include mediaq(screen, 100em) {
+		font-size: $font_size-base-rem + 0.1;
+	}
+
+	@include mediaq(screen, 160em) {
+		font-size: $font_size-base-rem + 0.125;
+	}
+}
