@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a896ebf3505efd3526381ea0643486df",
+    "content-hash": "5018094997094648dc0d3c76d287e008",
     "packages": [
         {
             "name": "composer/installers",
@@ -142,15 +142,6 @@
                 }
             ],
             "time": "2020-04-07T06:57:05+00:00"
-        },
-        {
-            "name": "npm-asset/html5shiv",
-            "version": "3.7.3",
-            "dist": {
-                "type": "tar",
-                "url": "https://registry.npmjs.org/html5shiv/-/html5shiv-3.7.3.tgz"
-            },
-            "type": "npm-asset"
         },
         {
             "name": "oomphinc/composer-installers-extender",

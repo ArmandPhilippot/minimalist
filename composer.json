@@ -19,16 +19,9 @@
 		"issues": "https://github.com/ArmandPhilippot/minimalist/issues",
 		"source": "https://github.com/ArmandPhilippot/minimalist"
 	},
-	"repositories": [
-		{
-			"type": "composer",
-			"url": "https://asset-packagist.org"
-		}
-	],
 	"require": {
 		"composer/installers": "~1.0",
-		"oomphinc/composer-installers-extender": "^1.1",
-		"npm-asset/html5shiv": "^3.7"
+		"oomphinc/composer-installers-extender": "^1.1"
 	},
 	"require-dev": {
 		"squizlabs/php_codesniffer": "^3.5",
@@ -45,11 +38,6 @@
 			"bower-asset",
 			"npm-asset",
 			"library"
-		],
-		"installer-paths": {
-			"assets/js/{$name}/": [
-				"npm-asset/html5shiv"
-			]
-		}
+		]
 	}
 }
