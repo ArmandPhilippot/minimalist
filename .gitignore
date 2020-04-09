@@ -14,4 +14,3 @@ vendor
 # Files to ignore
 *.map
 package-lock.json
-composer.lock
