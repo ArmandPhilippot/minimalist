@@ -30,8 +30,8 @@
 		echo '<footer class="entry-footer">';
 			wp_link_pages(
 				array(
-					'before'      => '<nav class="post-nav-links nav-links pagination" aria-label="' . esc_attr__( 'Page', 'Minimalist' ) . '"><span class="screen-reader-text">' . __( 'Pages:', 'Minimalist' ) . '</span>',
-					'after'       => '</nav>',
+					'before' => '<nav class="post-nav-links nav-links pagination" aria-label="' . esc_attr__( 'Page', 'Minimalist' ) . '"><span class="screen-reader-text">' . __( 'Pages:', 'Minimalist' ) . '</span>',
+					'after'  => '</nav>',
 				)
 			);
 		echo '</footer><!-- .entry-footer -->';

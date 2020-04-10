@@ -20,11 +20,11 @@
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'MINIMALIST_VERSION', '1.0.0' );
+define( 'MINIMALIST_VERSION', '1.0.1' );
 
 if ( ! function_exists( 'minimalist_setup' ) ) {
 	/**
-	 * Setup WordPress-Starter-Theme theme and registers support for various
+	 * Setup Minimalist theme and registers support for various
 	 * WordPress features.
 	 *
 	 * @since 1.0.0
@@ -66,8 +66,8 @@ if ( ! function_exists( 'minimalist_setup' ) ) {
 
 		// Enable support for Post Thumbnails.
 		add_theme_support( 'post-thumbnails' );
-		add_image_size( 'aptheme-featured-image', 2000, 1200, true );
-		add_image_size( 'aptheme-thumbnail-avatar', 100, 100, true );
+		add_image_size( 'minimalist-featured-image', 2000, 1200, true );
+		add_image_size( 'minimalist-thumbnail-avatar', 100, 100, true );
 
 		// Enable support for Post Formats.
 		add_theme_support(
@@ -108,13 +108,13 @@ if ( ! function_exists( 'minimalist_setup' ) ) {
 				array(
 					'name'      => __( 'Small', 'Minimalist' ),
 					'shortName' => __( 'S', 'Minimalist' ),
-					'size'      => 12,
+					'size'      => 13,
 					'slug'      => 'small',
 				),
 				array(
 					'name'      => __( 'Normal', 'Minimalist' ),
 					'shortName' => __( 'M', 'Minimalist' ),
-					'size'      => 16,
+					'size'      => 17,
 					'slug'      => 'normal',
 				),
 				array(

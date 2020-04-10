@@ -18,6 +18,12 @@
 		> img {
 			border-radius: px-to-rem(99);
 		}
+
+		figcaption {
+			right: 0;
+			margin-left: 30%;
+			margin-right: 30%;
+		}
 	}
 
 	&.is-style-circle-mask {

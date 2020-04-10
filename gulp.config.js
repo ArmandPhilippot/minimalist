@@ -114,7 +114,7 @@ module.exports = {
 		team: 'Armand Philippot <contact@armandphilippot.com>', // Team's Email ID.
 	},
 	zipConfig: {
-		zipFilename: 'Minimalist.zip',
+		zipFilename: 'minimalist.zip',
 		zipSource: [
 			'./**/*',
 			'!./{node_modules,node_modules/**/*}',

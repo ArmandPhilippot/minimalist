@@ -53,9 +53,10 @@ You can download the theme on Github or Gitlab, then extract it in /wp-content/t
 
 ## Changelog
 
-| Version | Date       | Notes          |
-| ------- | ---------- | -------------- |
-| v1.0.0  | 2020-04-08 | Stable version |
+| Version | Date       | Notes                                                               |
+| ------- | ---------- | ------------------------------------------------------------------- |
+| v1.0.1  | 2020-04-10 | Fix some theme prefixes, code alignements, font sizes and positions |
+| v1.0.0  | 2020-04-08 | Stable version                                                      |
 
 ## License
 

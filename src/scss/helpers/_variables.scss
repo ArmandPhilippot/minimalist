@@ -4,7 +4,7 @@
 $theme_name: 'Minimalist';
 $theme_uri: 'https://github.com/ArmandPhilippot/minimalist';
 $theme_description: 'A minimalist WordPress Theme.';
-$theme_version: '1.0.0';
+$theme_version: '1.0.1';
 $theme_author: 'Armand Philippot';
 $theme_author-uri: 'https://www.armandphilippot.com/';
 $theme_license: 'GNU General Public License v2 or later';
@@ -33,9 +33,9 @@ $font_size-base: 17px;
 $font_size-base-rem: 1.0625rem;
 $font_size-ratio: 1.125;
 
-$font_size-xs: 1rem / (1.15 * $font_size-ratio);
-$font_size-sm: 1rem / $font_size-ratio;
-$font_size-md: 1rem * (1 * $font_size-ratio);
+$font_size-xs: $font_size-base-rem / (1.15 * $font_size-ratio);
+$font_size-sm: $font_size-base-rem / $font_size-ratio;
+$font_size-md: $font_size-base-rem;
 $font_size-lg: $font_size-base-rem * $font_size-ratio;
 $font_size-xl: $font_size-base-rem * (1.15 * $font_size-ratio);
 $font_size-xxl: $font_size-base-rem * (1.3 * $font_size-ratio);
@@ -231,7 +231,7 @@ $comment-reply-link-active-color: $color_white;
 $comment-form-cookies-consent-font-size: $font_size-sm;
 $comment-form-required-color: $primary-color;
 $comment-form-label-color: $color_pickled-bluewood;
-$comment-form-label-font-size: $font_size-sm;
+$comment-form-label-font-size: $font_size-xs;
 $comment-form-allowed-tags-color: $color_nevada;
 $comment-form-allowed-tags-font-size: $font_size-xs;
 
