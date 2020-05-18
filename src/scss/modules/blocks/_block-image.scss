@@ -2,6 +2,16 @@
 	margin-bottom: $spacing_size-md;
 	position: relative;
 
+	figcaption {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin: 0 auto;
+		padding: $spacing_size-xxs $spacing_size-xs;
+		background: rgba($figure-caption-background-color, 0.8);
+		text-shadow: px-to-rem(1) px-to-rem(1) 0 rgba(0, 0, 0, 0.7);
+	}
+
 	&.is-resized {
 		display: table;
 
@@ -46,16 +56,6 @@
 		&.alignright {
 			margin-bottom: $spacing_size-xxs;
 		}
-	}
-
-	figcaption {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		margin: 0 auto;
-		padding: $spacing_size-xxs $spacing_size-xs;
-		background: rgba($figure-caption-background-color, 0.8);
-		text-shadow: px-to-rem(1) px-to-rem(1) 0 rgba(0, 0, 0, 0.7);
 	}
 
 	&:not(.is-style-circle-mask):hover {

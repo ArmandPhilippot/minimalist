@@ -15,7 +15,7 @@
 		height: auto;
 
 		&::before {
-			content: '\00b7 \00b7 \00b7';
+			content: "\00b7 \00b7 \00b7";
 			font-size: px-to-rem(30);
 			letter-spacing: 2rem;
 		}

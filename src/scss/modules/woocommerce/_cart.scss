@@ -1,0 +1,143 @@
+.woocommerce {
+	.woocommerce-cart-form {
+		.cart {
+			margin-bottom: $spacing_size-lg;
+			text-align: left;
+
+			tbody tr:not(:last-child) {
+				border-bottom: px-to-rem(1) solid
+					$woocommerce-table-tr-border-color;
+			}
+
+			img {
+				width: px-to-rem(60);
+			}
+
+			.button {
+				margin-top: $spacing_size-sm;
+				width: 100%;
+
+				@include mediaq(screen, 80em) {
+					margin-top: 0;
+					width: auto;
+				}
+			}
+
+			.product-thumbnail {
+				a {
+					display: block;
+					width: max-content;
+
+					&:focus {
+						background: transparent;
+					}
+				}
+			}
+
+			.actions {
+				background: $woocommerce-table-actions-background-color;
+				text-align: right;
+
+				.coupon {
+					display: inline-block;
+					text-align: left;
+					width: 100%;
+
+					@include mediaq(screen, 80em) {
+						float: left;
+						width: auto;
+					}
+
+					label {
+						display: none;
+					}
+
+					.input-text {
+						width: 100%;
+
+						@include mediaq(screen, 37.5em) {
+							width: 48%;
+						}
+
+						@include mediaq(screen, 80em) {
+							width: auto;
+						}
+					}
+
+					.button {
+						@include mediaq(screen, 37.5em) {
+							margin-left: 3%;
+							width: 48%;
+						}
+
+						@include mediaq(screen, 80em) {
+							margin-left: $spacing_size-xxs;
+							width: auto;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.cart_totals {
+		table {
+			tr:not(:last-child) {
+				border-bottom: px-to-rem(1) solid
+					$woocommerce-table-tr-border-color;
+			}
+
+			th {
+				vertical-align: top;
+			}
+		}
+
+		.woocommerce-shipping-methods {
+			@include list-reset;
+		}
+
+		.shipping-calculator-button {
+			display: inline-block;
+
+			&::after {
+				content: "\e019";
+				font-family: WooCommerce;
+				font-weight: 400;
+				font-variant: normal;
+				text-decoration: none;
+				text-transform: none;
+				margin-left: $spacing_size-xs;
+			}
+		}
+
+		.shipping-calculator-form {
+			margin-top: $spacing_size-md;
+			text-align: left;
+
+			.input-text {
+				width: 100%;
+			}
+		}
+
+		.wc-proceed-to-checkout {
+			margin-top: $spacing_size-lg;
+
+			.button {
+				display: inline-block;
+				text-align: center;
+				width: 100%;
+
+				@include mediaq(screen, 80em) {
+					font-size: $font_size-xl;
+					width: 45%;
+				}
+			}
+		}
+	}
+
+	.return-to-shop {
+		.button {
+			@include add-button-alt;
+		}
+	}
+}

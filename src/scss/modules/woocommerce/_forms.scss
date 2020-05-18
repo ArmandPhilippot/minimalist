@@ -1,0 +1,45 @@
+.woocommerce {
+	form {
+		.password-input {
+			display: block;
+			position: relative;
+
+			.input-text {
+				padding-right: $spacing_size-lg;
+			}
+		}
+
+		.show-password-input {
+			position: absolute;
+			top: $spacing_size-xs;
+			right: px-to-rem(11);
+			cursor: pointer;
+
+			&::after {
+				color: $form-login-password-after-color;
+				content: "\e010";
+				font-family: Woocommerce;
+			}
+
+			&.display-password::after {
+				color: $form-login-password-display-after-color;
+			}
+		}
+
+		.form-row {
+			label {
+				display: block;
+			}
+
+			.input-text {
+				width: 100%;
+			}
+
+			span {
+				em {
+					font-size: $font_size-sm;
+				}
+			}
+		}
+	}
+}

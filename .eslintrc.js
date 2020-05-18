@@ -4,5 +4,5 @@ module.exports = {
 		node: true,
 		es6: true
 	},
-	extends: "wordpress"
+	extends: [ "plugin:@wordpress/eslint-plugin/recommended" ]
 };

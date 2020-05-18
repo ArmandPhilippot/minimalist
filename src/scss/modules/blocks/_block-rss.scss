@@ -1,6 +1,14 @@
 .wp-block-rss {
 	margin-bottom: $spacing_size-md;
 
+	li {
+		padding-bottom: $spacing_size-sm;
+
+		@include mediaq(screen, 80em) {
+			padding-bottom: $spacing_size-md;
+		}
+	}
+
 	&.alignleft,
 	&.alignright {
 		margin-bottom: $spacing_size-xxs;
@@ -11,6 +19,7 @@
 		flex-wrap: wrap;
 		padding: 0;
 		list-style: none;
+
 		li {
 			border-bottom: px-to-rem(2) solid $block-grid-border-color;
 			margin: 0 0 $spacing_size-sm 0;
@@ -33,14 +42,6 @@
 			@include mediaq(screen, 48em) {
 				margin: 0 0 $spacing_size-md 0;
 			}
-		}
-	}
-
-	li {
-		padding-bottom: $spacing_size-sm;
-
-		@include mediaq(screen, 80em) {
-			padding-bottom: $spacing_size-md;
 		}
 	}
 

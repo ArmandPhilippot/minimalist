@@ -1,0 +1,106 @@
+.woocommerce {
+	.checkout_coupon {
+		border: px-to-rem(1) solid $woocommerce-table-tr-border-color;
+		margin-bottom: $spacing_size-md;
+		padding: $spacing_size-md;
+
+		p.form-row-first {
+			@include mediaq(screen, 48em) {
+				float: left;
+				width: 55%;
+			}
+		}
+
+		p.form-row-last {
+			margin-bottom: 0;
+
+			@include mediaq(screen, 48em) {
+				float: right;
+				width: 40%;
+			}
+		}
+
+		.input-text,
+		.button {
+			width: 100%;
+		}
+	}
+
+	.woocommerce-checkout-review-order-table {
+		text-align: left;
+
+		tr:not(:last-child) {
+			border-bottom: px-to-rem(1) solid $woocommerce-table-tr-border-color;
+		}
+
+		.woocommerce-shipping-methods {
+			margin-bottom: 0;
+
+			@include list-reset;
+		}
+	}
+
+	.woocommerce-checkout-payment {
+		.wc_payment_methods {
+			border: px-to-rem(1) solid $woocommerce-table-tr-border-color;
+
+			@include list-reset;
+
+			li {
+				padding: 0 $spacing_size-md;
+
+				&:first-child {
+					padding-top: $spacing_size-md;
+				}
+
+				&:last-child {
+					padding-bottom: $spacing_size-sm;
+				}
+			}
+
+			.payment_method_paypal {
+				@include clearfix;
+
+				img {
+					margin-left: $spacing_size-xs;
+					max-height: px-to-rem(80);
+				}
+
+				.about_paypal {
+					display: inline-block;
+					font-size: $font_size-sm;
+					margin-left: $spacing_size-sm;
+				}
+			}
+		}
+
+		.payment_box {
+			background-color: $payment-box-background-color;
+			color: $payment-box-color;
+			position: relative;
+			box-sizing: border-box;
+			width: 100%;
+			padding: $spacing_size-md;
+			margin: $spacing_size-md 0;
+			font-size: $font_size-md;
+			border-radius: px-to-rem(2);
+
+			&::before {
+				content: "";
+				display: block;
+				border: 1em solid $payment-box-background-color;
+				border-right-color: transparent;
+				border-left-color: transparent;
+				border-top-color: transparent;
+				position: absolute;
+				top: -0.75em;
+				left: 0;
+				margin: -1em 0 0 2em;
+			}
+
+			p:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

@@ -1,16 +1,9 @@
 /// Set up clearfix
 @mixin clearfix {
-	zoom: 1;
-	overflow: auto;
-
-	&::before,
-	&::after {
-		content: '';
-		display: table;
-	}
-
 	&::after {
 		clear: both;
+		content: "";
+		display: table;
 	}
 }
 
@@ -27,6 +20,113 @@
 	padding: 0;
 }
 
+/// Button
+@mixin add-button {
+	background: $button-background-color;
+	border: none;
+	border-radius: px-to-rem(2);
+	box-shadow: px-to-rem(1) px-to-rem(1) 0 px-to-rem(2) $button-shadow-color;
+	color: $button-color;
+	cursor: pointer;
+	font-weight: 600;
+	line-height: $line-height-initial;
+	padding: $spacing_size-sm;
+	position: relative;
+	left: 0;
+	top: 0;
+	text-decoration: none;
+	text-shadow: px-to-rem(1) px-to-rem(1) px-to-rem(1) rgba(0, 0, 0, 0.5);
+	transition: all 80ms ease;
+
+	@include mediaq(screen, 80em) {
+		font-weight: 400;
+	}
+
+	&:hover {
+		background: $button-hover-background-color;
+		color: $button-hover-color;
+	}
+
+	&:focus {
+		background: $button-focus-background-color;
+		color: $button-focus-color;
+	}
+
+	&:active {
+		background: $button-active-background-color;
+		color: $button-active-color;
+		box-shadow: none;
+		outline: none;
+		top: px-to-rem(3);
+		left: px-to-rem(3);
+	}
+}
+
+/// Button alternative
+@mixin add-button-alt {
+	display: inline-block;
+	background: $more-link-background-color;
+	border: px-to-rem(1) solid $more-link-border-color;
+	border-radius: px-to-rem(2);
+	box-shadow: none;
+	color: $more-link-color;
+	font-size: $font_size-sm;
+	font-weight: 500;
+	text-align: center;
+	text-shadow: none;
+	padding: $spacing_size-sm;
+
+	&:hover {
+		background: $more-link-hover-background-color;
+		color: $more-link-hover-color;
+		text-decoration: none;
+	}
+
+	&:focus {
+		background: $more-link-focus-background-color;
+		color: $more-link-focus-color;
+	}
+
+	&:active {
+		background: $more-link-active-background-color;
+		color: $more-link-active-color;
+		left: 0;
+		top: 0;
+	}
+
+	&::after {
+		content: "\2192";
+		margin-left: $spacing_size-xxxs;
+		position: relative;
+		top: px-to-rem(2) * -1;
+	}
+}
+
+/// Line Break before
+@mixin line-break-before {
+	&::before {
+		content: "\A";
+		white-space: pre;
+	}
+}
+
+/// Line Break after
+@mixin line-break-after {
+	&::after {
+		content: "\A";
+		white-space: pre;
+	}
+}
+
+/// Table reset
+@mixin table-reset {
+	table-layout: auto;
+
+	tr:nth-child(2n) {
+		background: transparent;
+	}
+}
+
 /// Media Queries
 /// @param {String} $media-type [all] - Target media type. Either `all`, `screen`, `print`, 'speech' or 'retina'.
 /// @param {Number} $min-width [null] - Min Width with unit
@@ -38,41 +138,41 @@
 	$max-width: null,
 	$pointer: null
 ) {
-	$query: '';
-	$type: '';
+	$query: "";
+	$type: "";
 	@if $media-type == screen {
-		$type: 'only screen';
+		$type: "only screen";
 	} @else if $media-type == print {
-		$type: 'only print';
+		$type: "only print";
 	} @else if $media-type == handled {
-		$type: 'only handheld';
+		$type: "only handheld";
 	} @else if $media-type == retina {
-		$type: '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)';
+		$type: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 	} @else {
-		$type: 'all';
+		$type: "all";
 	}
 	$query: $query + $type;
 	@if $min-width != null {
-		@if is-number($min-width) and unit($min-width) != '' {
-			$query: $query + ' and (min-width: #{$min-width})';
+		@if is-number($min-width) and unit($min-width) != "" {
+			$query: $query + " and (min-width: #{$min-width})";
 		} @else {
 			@error "Property #{$min-width} must be a number with unit.";
 		}
 	}
 	@if $max-width != null {
-		@if is-number($max-width) and unit($max-width) != '' {
+		@if is-number($max-width) and unit($max-width) != "" {
 			$max-width: calc(#{$max-width} - 1px);
-			$query: $query + ' and (max-width: #{$max-width})';
+			$query: $query + " and (max-width: #{$max-width})";
 		} @else {
 			@error "Property #{$max-width} must be a number with unit.";
 		}
 	}
 	@if $pointer == coarse {
-		$query: $query + ' and (any-pointer: #{$pointer})';
+		$query: $query + " and (any-pointer: #{$pointer})";
 	} @else if $pointer == fine {
-		$query: $query + ' and (any-pointer: #{$pointer})';
+		$query: $query + " and (any-pointer: #{$pointer})";
 	} @else if $pointer == none {
-		$query: $query + ' and (any-pointer: #{$pointer})';
+		$query: $query + " and (any-pointer: #{$pointer})";
 	} @else if $pointer == null {
 		$query: $query;
 	} @else {

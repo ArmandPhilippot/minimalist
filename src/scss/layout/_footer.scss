@@ -14,8 +14,8 @@
 	}
 
 	@include mediaq(screen, 80em) {
-		&:after {
-			content: '';
+		&::after {
+			content: "";
 			display: block;
 			margin-left: 28%;
 		}
@@ -93,7 +93,7 @@
 
 				&::before {
 					display: inline-block;
-					content: '|';
+					content: "|";
 					color: $footer-sep-color;
 					margin: 0 px-to-rem(4) 0 px-to-rem(2);
 				}
@@ -115,7 +115,7 @@
 
 			@include mediaq(screen, 48em) {
 				&::before {
-					content: '-';
+					content: "-";
 					color: $footer-sep-color;
 					margin: 0 $spacing_size-xxs;
 				}

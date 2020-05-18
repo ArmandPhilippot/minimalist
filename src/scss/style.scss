@@ -2,14 +2,14 @@
 //=============================================================================
 // Configuration
 //=============================================================================
-@import 'helpers/variables';
-@import 'helpers/functions';
-@import 'helpers/mixins';
+@import "helpers/variables";
+@import "helpers/functions";
+@import "helpers/mixins";
 
 //=============================================================================
 // Theme info
 //=============================================================================
-@import 'base/theme_info';
+@import "base/theme_info";
 
 /*!============================================================================
 >>> TABLE OF CONTENTS:
@@ -33,14 +33,16 @@
 	5.5. Gallery
 	5.6. Widgets
 	5.7. Gutenberg blocks
+	5.8. Woocommerce
 =============================================================================*/
+@import "typography/fonts";
 
 /*=============================================================================
 1. Normalize CSS
 Resetting and rebuilding styles have been helped along thanks to the fine work
 of Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 =============================================================================*/
-@import 'base/normalize';
+@import "base/normalize";
 
 /*=============================================================================
 2. Helpers
@@ -49,60 +51,60 @@ of Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*=============================================================================
 2.1. Accessibility
 =============================================================================*/
-@import 'helpers/accessibility';
+@import "helpers/accessibility";
 
 /*=============================================================================
 2.2. Alignments
 =============================================================================*/
-@import 'helpers/alignments';
+@import "helpers/alignments";
 
 /*=============================================================================
 2.3. Clearings
 =============================================================================*/
-@import 'helpers/clearings';
+@import "helpers/clearings";
 
 /*=============================================================================
 3. Common Elements
 =============================================================================*/
-@import 'base/base';
+@import "base/base";
 
 /*=============================================================================
 3.1. Typography
 =============================================================================*/
-@import 'typography/headings';
-@import 'typography/phrasing';
+@import "typography/headings";
+@import "typography/phrasing";
 
 /*=============================================================================
 3.2. Elements
 =============================================================================*/
-@import 'elements/blockquotes';
-@import 'elements/preformat';
-@import 'elements/lists';
-@import 'elements/tables';
-@import 'elements/forms';
-@import 'elements/links';
-@import 'elements/media';
+@import "elements/blockquotes";
+@import "elements/preformat";
+@import "elements/lists";
+@import "elements/tables";
+@import "elements/forms";
+@import "elements/links";
+@import "elements/media";
 
 /*=============================================================================
 4. Layout
 =============================================================================*/
-@import 'layout/layout';
+@import "layout/layout";
 
 /*=============================================================================
 4.1. Structure
 =============================================================================*/
-@import 'layout/header';
-@import 'layout/main';
-@import 'layout/sidebar';
-@import 'layout/footer';
+@import "layout/header";
+@import "layout/main";
+@import "layout/sidebar";
+@import "layout/footer";
 
 /*=============================================================================
 4.2. Templates
 =============================================================================*/
-@import 'layout/frontpage';
-@import 'layout/author';
-@import 'layout/posts-and-pages';
-@import 'layout/taxonomy';
+@import "layout/frontpage";
+@import "layout/author";
+@import "layout/posts-and-pages";
+@import "layout/taxonomy";
 
 /*=============================================================================
 5. Modules
@@ -111,35 +113,40 @@ of Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*=============================================================================
 5.1. Main navigation
 =============================================================================*/
-@import 'modules/navigation';
+@import "modules/navigation";
 
 /*=============================================================================
 5.2. Pagination & Posts navigation
 =============================================================================*/
-@import 'modules/pagination';
-@import 'modules/readmore';
+@import "modules/pagination";
+@import "modules/readmore";
 
 /*=============================================================================
 5.3. Comments
 =============================================================================*/
-@import 'modules/comments';
+@import "modules/comments";
 
 /*=============================================================================
 5.4. Forms
 =============================================================================*/
-@import 'modules/search';
+@import "modules/search";
 
 /*=============================================================================
 5.5. Gallery
 =============================================================================*/
-@import 'modules/gallery';
+@import "modules/gallery";
 
 /*=============================================================================
 5.6. Widgets
 =============================================================================*/
-@import 'modules/widgets';
+@import "modules/widgets";
 
 /*=============================================================================
 5.7. Gutenberg blocks
 =============================================================================*/
-@import 'modules/blocks';
+@import "modules/blocks";
+
+/*=============================================================================
+5.8. Woocommerce
+=============================================================================*/
+@import "modules/woocommerce";

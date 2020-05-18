@@ -1,0 +1,16 @@
+.woocommerce {
+	.col2-set {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+
+	.col-1,
+	.col-2 {
+		flex: 0 0 100%;
+
+		@include mediaq(screen, 48em) {
+			flex: 0 0 47%;
+		}
+	}
+}

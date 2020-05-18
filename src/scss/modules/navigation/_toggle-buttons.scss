@@ -19,7 +19,7 @@
 		&::before,
 		&::after {
 			border-radius: px-to-rem(3);
-			content: '';
+			content: "";
 			display: block;
 			position: absolute;
 		}
@@ -56,12 +56,14 @@
 			transition-duration: 0.3s, 0.3s;
 			width: 100%;
 		}
+
 		&::before {
-			top: px-to-rem(11) * -1;
+			top: px-to-rem(-11);
 			transform-origin: top;
 		}
+
 		&::after {
-			bottom: px-to-rem(11) * -1;
+			bottom: px-to-rem(-11);
 			transform-origin: bottom;
 		}
 	}
@@ -69,7 +71,7 @@
 
 /* Hamburger animation */
 .header-container
-	> [type='checkbox']:checked
+	> [type="checkbox"]:checked
 	~ .top-nav-label
 	.open-close-menu {
 	background: none;
@@ -123,7 +125,7 @@
 	}
 }
 
-.header-container > input[type='checkbox'] {
+.header-container > input[type="checkbox"] {
 	&:hover ~ .top-nav-label {
 		background: $main-nav-toggle-hover-background-color;
 		color: $main-nav-toggle-hover-color;
@@ -219,7 +221,7 @@
 }
 
 /* Plus/Minus button animation */
-.main-navigation [type='checkbox']:checked ~ .top-nav-label .open-close-menu {
+.main-navigation [type="checkbox"]:checked ~ .top-nav-label .open-close-menu {
 	&::before {
 		transform: rotate(90deg);
 	}
@@ -256,7 +258,7 @@
 	}
 }
 
-.main-navigation input[type='checkbox'] {
+.main-navigation input[type="checkbox"] {
 	&:hover ~ .top-nav-label {
 		background: $main-nav-toggle-hover-background-color;
 		color: $main-nav-toggle-hover-color;
@@ -284,7 +286,7 @@
 
 /* Hide and place checkbox over the toggle buttons */
 .header-container {
-	input[type='checkbox'] {
+	input[type="checkbox"] {
 		cursor: pointer;
 		display: block;
 		opacity: 0;
@@ -292,7 +294,7 @@
 		z-index: 2;
 	}
 
-	> input[type='checkbox'] {
+	> input[type="checkbox"] {
 		right: px-to-rem(51);
 		top: px-to-rem(33);
 
@@ -301,7 +303,7 @@
 		}
 	}
 
-	.menu-item-has-children input[type='checkbox'] {
+	.menu-item-has-children input[type="checkbox"] {
 		right: px-to-rem(19);
 		top: px-to-rem(19);
 
@@ -318,12 +320,12 @@
 }
 
 /* Display the right label if checkbox checked */
-.header-container input[type='checkbox'] + .top-nav-label .close-menu,
-.header-container input[type='checkbox']:checked + .top-nav-label .open-menu {
+.header-container input[type="checkbox"] + .top-nav-label .close-menu,
+.header-container input[type="checkbox"]:checked + .top-nav-label .open-menu {
 	display: none;
 }
 
-.header-container input[type='checkbox']:checked + .top-nav-label .close-menu,
-.header-container input[type='checkbox'] + .top-nav-label .open-menu {
+.header-container input[type="checkbox"]:checked + .top-nav-label .close-menu,
+.header-container input[type="checkbox"] + .top-nav-label .open-menu {
 	display: block;
 }

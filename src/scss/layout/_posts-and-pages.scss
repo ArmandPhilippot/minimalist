@@ -11,8 +11,8 @@
 	}
 
 	&.sticky {
-		background: $post-sticky-background-color;
-		padding: $spacing_size-md 0 $spacing_size-xxxs 0;
+		border: px-to-rem(1) solid $post-sticky-border-color;
+		padding: $spacing_size-md $spacing_size-md $spacing_size-xxxs;
 	}
 }
 
@@ -26,14 +26,5 @@
 
 	@include mediaq(screen, 100em) {
 		margin: 0 0 $spacing_size-xxl;
-	}
-}
-
-.has-sidebar {
-	.site-main .post,
-	.site-main .page {
-		&.sticky {
-			padding: $spacing_size-md $spacing_size-lg $spacing_size-xxxs 0;
-		}
 	}
 }

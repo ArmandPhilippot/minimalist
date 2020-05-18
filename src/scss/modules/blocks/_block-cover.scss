@@ -29,7 +29,7 @@
 
 	&.has-background-dim {
 		&::before {
-			content: '';
+			content: "";
 			background-color: inherit;
 		}
 
@@ -61,11 +61,13 @@
 		display: flex;
 	}
 
-	// Using flexbox without an assigned height property breaks vertical center alignment in IE11.
-	// Appending an empty ::after element tricks IE11 into giving the cover image an implicit height, which sidesteps this issue.
+	// Using flexbox without an assigned height property breaks vertical center
+	// alignment in IE11.
+	// Appending an empty ::after element tricks IE11 into giving the cover image
+	// an implicit height, which sidesteps this issue.
 	&::after {
 		display: block;
-		content: '';
+		content: "";
 		font-size: 0;
 		min-height: inherit;
 
@@ -109,28 +111,6 @@
 	}
 }
 
-body:not(.has-sidebar) .wp-block-cover {
-	&.alignfull,
-	&.alignwide {
-		.wp-block-cover__inner-container {
-			@include mediaq(screen, 55em) {
-				max-width: px-to-rem($container_xs);
-				width: px-to-rem($container_xs);
-			}
-
-			@include mediaq(screen, 80em) {
-				max-width: px-to-rem($container_sm);
-				width: px-to-rem($container_sm);
-			}
-
-			@include mediaq(screen, 160em) {
-				max-width: px-to-rem($container_md);
-				width: px-to-rem($container_md);
-			}
-		}
-	}
-}
-
 .has-sidebar .wp-block-cover {
 	&.alignfull,
 	&.alignwide {
@@ -149,6 +129,28 @@ body:not(.has-sidebar) .wp-block-cover {
 				max-width: calc(
 					#{px-to-rem($container_xxl)} * 0.65 - #{$spacing_size-lg}
 				);
+			}
+		}
+	}
+}
+
+body:not(.has-sidebar) .wp-block-cover {
+	&.alignfull,
+	&.alignwide {
+		.wp-block-cover__inner-container {
+			@include mediaq(screen, 55em) {
+				max-width: px-to-rem($container_xs);
+				width: px-to-rem($container_xs);
+			}
+
+			@include mediaq(screen, 80em) {
+				max-width: px-to-rem($container_sm);
+				width: px-to-rem($container_sm);
+			}
+
+			@include mediaq(screen, 160em) {
+				max-width: px-to-rem($container_md);
+				width: px-to-rem($container_md);
 			}
 		}
 	}

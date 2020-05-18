@@ -27,10 +27,10 @@
 			border-left: px-to-rem(9) solid transparent;
 			border-right: px-to-rem(9) solid transparent;
 			border-top: 0 solid $main-nav-border-color;
-			content: '';
+			content: "";
 			position: absolute;
 			right: px-to-rem(22);
-			top: px-to-rem(9) * -1;
+			top: px-to-rem(-9);
 
 			@include mediaq(screen, 64em) {
 				display: none;
@@ -41,7 +41,7 @@
 			border-color: $main-nav-after-border-color transparent;
 			border-style: solid;
 			border-width: 0 px-to-rem(8) px-to-rem(8);
-			content: '';
+			content: "";
 			position: absolute;
 			right: px-to-rem(23);
 			top: px-to-rem(7) * -1;
@@ -76,7 +76,7 @@
 							background: $main-nav-lg-link-hover-color;
 							border-top-left-radius: px-to-rem(3);
 							border-top-right-radius: px-to-rem(3);
-							content: '';
+							content: "";
 							display: block;
 							height: px-to-rem(3);
 							width: 70%;
@@ -95,7 +95,7 @@
 							background: $main-nav-lg-link-focus-border-color;
 							border-top-left-radius: px-to-rem(3);
 							border-top-right-radius: px-to-rem(3);
-							content: '';
+							content: "";
 							display: block;
 							height: px-to-rem(3);
 							width: 100%;
@@ -114,7 +114,7 @@
 							background: $main-nav-lg-link-active-color;
 							border-top-left-radius: px-to-rem(3);
 							border-top-right-radius: px-to-rem(3);
-							content: '';
+							content: "";
 							display: block;
 							height: px-to-rem(3);
 							width: 70%;
@@ -180,7 +180,7 @@
 					border-top-left-radius: px-to-rem(3);
 					border-top-right-radius: px-to-rem(3);
 					bottom: 0;
-					content: '';
+					content: "";
 					display: block;
 					height: px-to-rem(3);
 					left: 15%;
@@ -210,7 +210,9 @@
 				color: $main-nav-link-focus-color;
 			}
 
-			/* Same rules - Focus-within not supported by Edge/IE. Unsupported selectors cause the entire block to be ignored, so we must repeat all styles separately. */
+			/* Same rules - Focus-within not supported by Edge/IE. Unsupported
+			* selectors cause the entire block to be ignored, so we must repeat all
+			* styles separately. */
 			&:focus-within > a:focus {
 				background: $main-nav-link-focus-background-color;
 				color: $main-nav-link-focus-color;
@@ -226,7 +228,9 @@
 				}
 			}
 
-			/* Same rules - Focus-within not supported by Edge/IE. Unsupported selectors cause the entire block to be ignored, so we must repeat all styles separately. */
+			/* Same rules - Focus-within not supported by Edge/IE. Unsupported
+			* selectors cause the entire block to be ignored, so we must repeat all
+			* styles separately. */
 			&:focus-within > a:active {
 				background: $main-nav-link-active-background-color;
 				color: $main-nav-link-active-color;
@@ -252,7 +256,7 @@
 
 				&::after {
 					@include mediaq(screen, null, null, fine) {
-						content: '\25BC';
+						content: "\25BC";
 						display: inline-block;
 						margin-left: $spacing_size-xxs;
 						text-decoration: none;
@@ -280,7 +284,7 @@
 				border-left: px-to-rem(9) solid transparent;
 				border-right: px-to-rem(9) solid transparent;
 				border-top: 0 solid $main-nav-border-color;
-				content: '';
+				content: "";
 				position: absolute;
 				left: 30%;
 				top: px-to-rem(9) * -1;
@@ -290,7 +294,7 @@
 				border-color: $color_white transparent;
 				border-style: solid;
 				border-width: 0 px-to-rem(8) px-to-rem(8);
-				content: '';
+				content: "";
 				position: absolute;
 				left: calc(30% + 1px);
 				top: px-to-rem(7) * -1;
@@ -356,7 +360,7 @@
 
 				&::after {
 					@include mediaq(screen, null, null, fine) {
-						content: '\25BA';
+						content: "\25BA";
 						display: inline-block;
 						margin-left: $spacing_size-xxs;
 						text-decoration: none;
@@ -370,12 +374,12 @@
 }
 
 /* Hide/Show Main Menu if checkbox unchecked/checked */
-.header-container > [type='checkbox']:checked ~ .main-navigation {
+.header-container > [type="checkbox"]:checked ~ .main-navigation {
 	display: block;
 }
 
 /* Hide/Show Sub-Menu if checkbox unchecked/checked */
-.main-navigation [type='checkbox']:checked ~ ul {
+.main-navigation [type="checkbox"]:checked ~ ul {
 	display: block;
 }
 

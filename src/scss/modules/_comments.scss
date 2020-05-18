@@ -4,6 +4,56 @@
 	font-weight: 300;
 }
 
+/* Comment Form */
+.comment-form {
+	.required {
+		color: $comment-form-required-color;
+		font-weight: 600;
+	}
+
+	label {
+		color: $comment-form-label-color;
+		display: block;
+		font-size: $comment-form-label-font-size;
+		letter-spacing: px-to-rem(1);
+		margin-bottom: $spacing_size-xxs;
+		text-transform: uppercase;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="tel"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	textarea {
+		width: 100%;
+
+		@include mediaq(screen, 80em) {
+			width: 75%;
+		}
+	}
+
+	.comment-form-cookies-consent {
+		input {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		label {
+			display: inline;
+			letter-spacing: 0;
+			text-transform: none;
+			font-size: $comment-form-cookies-consent-font-size;
+			vertical-align: middle;
+		}
+	}
+}
+
 /* Comment List */
 .comment-list {
 	@include list-reset;
@@ -24,7 +74,7 @@
 }
 
 .comment-author {
-	color: $comment-author-color;
+	color: $comment-meta-color;
 	margin-bottom: $spacing_size-xxs;
 }
 
@@ -38,7 +88,7 @@
 
 .bypostauthor > article .fn {
 	&::after {
-		content: '\1F464';
+		content: "\1F464";
 		left: $spacing_size-xxs;
 		position: relative;
 	}
@@ -51,7 +101,7 @@
 
 a.comment-edit-link {
 	&::before {
-		content: '\270E';
+		content: "\270E";
 		margin-right: px-to-rem(3);
 	}
 }
@@ -83,59 +133,9 @@ a.comment-reply-link {
 	}
 
 	&::before {
-		content: '\21a9';
+		content: "\21a9";
 		margin-right: $spacing_size-xxs;
 		position: relative;
-	}
-}
-
-/* Comment Form */
-.comment-form {
-	.required {
-		color: $comment-form-required-color;
-		font-weight: 600;
-	}
-
-	label {
-		color: $comment-form-label-color;
-		display: block;
-		font-size: $comment-form-label-font-size;
-		letter-spacing: px-to-rem(1);
-		margin-bottom: $spacing_size-xxs;
-		text-transform: uppercase;
-	}
-
-	input[type='text'],
-	input[type='email'],
-	input[type='url'],
-	input[type='tel'],
-	input[type='date'],
-	input[type='month'],
-	input[type='week'],
-	input[type='time'],
-	input[type='datetime'],
-	input[type='datetime-local'],
-	textarea {
-		width: 100%;
-
-		@include mediaq(screen, 80em) {
-			width: 75%;
-		}
-	}
-
-	.comment-form-cookies-consent {
-		input {
-			display: inline-block;
-			vertical-align: middle;
-		}
-
-		label {
-			display: inline;
-			letter-spacing: 0;
-			text-transform: none;
-			font-size: $comment-form-cookies-consent-font-size;
-			vertical-align: middle;
-		}
 	}
 }
 

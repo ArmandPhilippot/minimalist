@@ -1,0 +1,25 @@
+.frontpage h2 {
+	font-size: $font_size-xxxxl;
+	font-weight: 300;
+}
+
+.frontpage h3 {
+	font-size: $font_size-xxxl;
+	font-weight: 300;
+}
+
+.frontpage h4 {
+	font-size: $font_size-xxl;
+	font-weight: 300;
+}
+
+.frontpage h5 {
+	font-size: $font_size-xl;
+	font-weight: 400;
+}
+
+.frontpage h6 {
+	font-size: $font_size-lg;
+	font-weight: 400;
+	letter-spacing: px-to-rem(1);
+}

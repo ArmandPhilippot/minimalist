@@ -1,17 +1,17 @@
 //==============================================================================
 // Theme Information
 //==============================================================================
-$theme_name: 'Minimalist';
-$theme_uri: 'https://github.com/ArmandPhilippot/minimalist';
-$theme_description: 'A minimalist WordPress Theme.';
-$theme_version: '1.0.1';
-$theme_author: 'Armand Philippot';
-$theme_author-uri: 'https://www.armandphilippot.com/';
-$theme_license: 'GNU General Public License v2 or later';
-$theme_license-uri: 'http://www.gnu.org/licenses/gpl-2.0.html';
-$theme_domain: 'Minimalist';
-$theme_domain-path: '/languages/';
-$theme_tags: 'one-column, two-columns, right-sidebar, custom-background, custom-logo, custom-menu, editor-style, responsive-layout, footer-widgets, sticky-post, translation-ready, accessibility-ready, block-styles, wide-blocks';
+$theme_name: "Minimalist";
+$theme_uri: "https://github.com/ArmandPhilippot/minimalist";
+$theme_description: "A minimalist WordPress Theme.";
+$theme_version: "1.1.0";
+$theme_author: "Armand Philippot";
+$theme_author-uri: "https://www.armandphilippot.com/";
+$theme_license: "GNU General Public License v2 or later";
+$theme_license-uri: "http://www.gnu.org/licenses/gpl-2.0.html";
+$theme_domain: "Minimalist";
+$theme_domain-path: "/languages/";
+$theme_tags: "one-column, two-columns, right-sidebar, custom-background, custom-logo, custom-menu, editor-style, responsive-layout, footer-widgets, sticky-post, translation-ready, accessibility-ready, block-styles, wide-blocks";
 
 //=============================================================================
 // Containers
@@ -26,8 +26,8 @@ $container_xxl: 1400;
 //=============================================================================
 // Fonts
 //=============================================================================
-$font_body: (Arial, 'Liberation Sans', sans-serif);
-$font_mono: ('Courier New', Courier, monospace);
+$font_body: (arial, "Liberation Sans", sans-serif);
+$font_mono: ("Courier New", courier, monospace);
 
 $font_size-base: 17px;
 $font_size-base-rem: 1.0625rem;
@@ -67,6 +67,10 @@ $spacing_size-xxxl: $spacing_golden-number * 3 * 1rem;
 $color_white: #fff;
 $color_black: #000;
 $color_toryblue: #1450aa;
+$color_curious-blue: #2596d1;
+$color_grenadier: #d14800;
+$color_red: #f00;
+$color_green: #008000;
 $color_shark: #25272c;
 $color_pickled-bluewood: #314459;
 $color_nevada: #646e75;
@@ -101,7 +105,7 @@ $site-title-focus-color: $color_white;
 $site-title-active-color: $primary-color-darker;
 
 // Main
-$post-sticky-background-color: $color_gallery;
+$post-sticky-border-color: $primary-color;
 
 // Footer
 $footer-border-color: $color_gallery;
@@ -140,8 +144,11 @@ $button-background-color: $primary-color;
 $button-color: $color_white;
 $button-shadow-color: $primary-color-dark;
 $button-hover-background-color: $primary-color-light;
+$button-hover-color: $color_white;
 $button-focus-background-color: $primary-color-light;
+$button-focus-color: $color_white;
 $button-active-background-color: $primary-color-dark;
+$button-active-color: $color_white;
 
 // Search
 $search-button-background-color: $color_white;
@@ -190,11 +197,13 @@ $nav-links-focus-background-color: $primary-color;
 $nav-links-focus-color: $color_white;
 $nav-links-active-background-color: $primary-color-dark;
 $nav-links-active-color: $color_white;
+$nav-links-current-background-color: $color_white;
 $nav-links-current-color: $primary-color-darker;
 
 // More Link
 $more-link-background-color: $color_white;
 $more-link-border-color: $primary-color;
+$more-link-color: $primary-color;
 $more-link-hover-background-color: $primary-color;
 $more-link-hover-color: $color_white;
 $more-link-focus-background-color: $primary-color;
@@ -215,7 +224,7 @@ $main-nav-plus-minus-background-color: $color_gallery;
 $main-nav-lg-plus-minus-background-color: $color_white;
 
 // Comment List
-$comment-author-color: $color_shark;
+$comment-meta-color: $color_shark;
 $comment-border-color: $color_gainsboro;
 
 // Comment Reply Link
@@ -262,3 +271,51 @@ $block-table-subtle-light-gray: #f3f4f5;
 $block-table-subtle-pale-green: #e9fbe5;
 $block-table-subtle-pale-blue: #e7f5fe;
 $block-table-subtle-pale-pink: #fcf0ef;
+
+// Woocommerce
+$address-border-color: $color_gainsboro;
+$avatar-border-color: $color_gainsboro;
+$form-login-password-after-color: $primary-color;
+$form-login-password-display-after-color: $primary-color-lighter;
+$demo-store-notice-background-color: $primary-color-darker;
+$demo-store-notice-color: $color_white;
+$demo-store-notice-link-color: $color_white;
+$notice-background-color: $color_gallery;
+$notice-border-color: $primary-color;
+$notice-color: $color_shark;
+$notice-icon-color: $primary-color;
+$notice-info-color: $primary-color;
+$notice-message-color: #8fae1b;
+$notice-error-color: #b81c23;
+$onsale-background-color: $color_grenadier;
+$onsale-color: $color_white;
+$order-overview-border-color: $color_gainsboro;
+$password-strength-short-color: $color_red;
+$password-strength-bad-color: $color_grenadier;
+$password-strength-good-color: $color_curious-blue;
+$password-strength-strong-color: $color_green;
+$payment-box-background-color: $color_gallery;
+$payment-box-color: $color_shark;
+$price-slider-background-color: $primary-color;
+$price-slider-focus-background-color: $primary-color-lighter;
+$price-slider-dark-background-color: $primary-color-darker;
+$product-price-color: $color_grenadier;
+$product-link-focus-color: $primary-color-light;
+$product-category-description-color: $color_pickled-bluewood;
+$product-gallery-trigger-background-color: $color_white;
+$product-tab-border-color: $color_gainsboro;
+$product-tab-active-background-color: $primary-color-dark;
+$product-tab-active-color: $color_white;
+$product-tab-active-hover-background-color: $primary-color;
+$product-tab-active-focus-background-color: $primary-color-light;
+$product-tab-active-active-background-color: $primary-color-darker;
+$remove-link-color: $color_red;
+$remove-link-hover-background-color: $color_red;
+$remove-link-hover-color: $color_white;
+$star-rating-color: $color_pickled-bluewood;
+$staring-focus-background-color: transparent;
+$staring-focus-color: $color_grenadier;
+$staring-selected-focus-color: $primary-color;
+$woocommerce-table-tr-border-color: $color_gainsboro;
+$woocommerce-table-actions-background-color: $color_gallery;
+$woocommerce-nav-border-color: $color_gainsboro;

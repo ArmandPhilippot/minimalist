@@ -1,5 +1,6 @@
 # Copyright (C) 2020 Minimalist
 # This file is distributed under the same license as the Minimalist package.
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Minimalist\n"
@@ -11,28 +12,41 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/ArmandPhilippot/minimalist/issues\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: archive.php:28, author.php:36, category.php:31, comments.php:62, date.php:28, index.php:36, search.php:28, tag.php:31
+#: archive.php:31 author.php:39 category.php:34 comments.php:62 date.php:31
+#: inc/woocommerce-functions.php:43 index.php:39 search.php:31 tag.php:34
 msgid "Previous"
 msgstr ""
 
-#: archive.php:29, author.php:37, category.php:32, comments.php:63, date.php:29, index.php:37, search.php:29, tag.php:32
+#: archive.php:32 author.php:40 category.php:35 comments.php:63 date.php:32
+#: inc/woocommerce-functions.php:44 index.php:40 search.php:32 tag.php:35
 msgid "Next"
 msgstr ""
 
-#: author.php:22
+#: author.php:23
 msgid "Website:"
 msgstr ""
 
-#. translators: %s: post title.
 #: comments.php:27
+#, php-format
 msgctxt "comments title"
 msgid "One reply to &ldquo;%s&rdquo;"
 msgstr ""
+
+#: comments.php:33
+#, php-format
+msgctxt "comments title"
+msgid "%1$s reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s replies to &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
 
 #: comments.php:53
 msgid "Reply"
@@ -74,51 +88,32 @@ msgstr ""
 msgid "XL"
 msgstr ""
 
-#: functions.php:141, template-parts/header/navigation-top.php:18
+#: functions.php:149 template-parts/header/navigation-top.php:18
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:142
+#: functions.php:150
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:158
+#: functions.php:166
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:160
+#: functions.php:168
 msgid "Add widgets here to appear in your sidebar."
 msgstr ""
 
-#: functions.php:169
+#: functions.php:177
 msgid "Footer"
 msgstr ""
 
-#: functions.php:171
+#: functions.php:179
 msgid "Add widgets here to appear in your footer."
 msgstr ""
 
 #: header.php:22
 msgid "Skip to content"
-msgstr ""
-
-#. translators: %s: search query.
-#: search.php:16
-msgid "Search Results for: %s"
-msgstr ""
-
-#: searchform.php:22
-msgid "Search for:"
-msgstr ""
-
-#: searchform.php:23
-msgctxt "placeholder"
-msgid "Search &hellip;"
-msgstr ""
-
-#: searchform.php:26
-msgctxt "submit button"
-msgid "Search"
 msgstr ""
 
 #: inc/template-functions.php:44
@@ -129,13 +124,82 @@ msgstr ""
 msgid "Close submenu"
 msgstr ""
 
-#. translators: %s: Name of current post.
-#. translators: %s: Name of current post.
-#: inc/template-functions.php:61, inc/template-functions.php:80
+#: inc/template-functions.php:61 inc/template-functions.php:80
+#, php-format
 msgid "Continue reading %s"
 msgstr ""
 
-#. translators: Copyright date format, see https://secure.php.net/date
+#: inc/woocommerce-functions.php:62
+msgid "SKU:"
+msgstr ""
+
+#: inc/woocommerce-functions.php:68
+msgid "N/A"
+msgstr ""
+
+#: inc/woocommerce-functions.php:73
+msgid "Category:"
+msgid_plural "Categories:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/woocommerce-functions.php:75
+msgid "Tag:"
+msgid_plural "Tags:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/woocommerce-functions.php:119 searchform.php:22
+msgid "Search for:"
+msgstr ""
+
+#: inc/woocommerce-functions.php:120
+msgid "Search products&hellip;"
+msgstr ""
+
+#: inc/woocommerce-functions.php:123 searchform.php:26
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: inc/woocommerce-functions.php:137 template-parts/post/content-none.php:31
+msgid "It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+
+#: inc/woocommerce-functions.php:154
+msgid "Products"
+msgstr ""
+
+#: inc/woocommerce-functions.php:166
+msgid "Categories"
+msgstr ""
+
+#: inc/woocommerce-functions.php:267
+#, php-format
+msgid "Rated %1$s out of 5 based on %2$s customer rating"
+msgid_plural "Rated %1$s out of 5 based on %2$s customer ratings"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/woocommerce-functions.php:270
+#, php-format
+msgid "Rated %s out of 5"
+msgstr ""
+
+#: index.php:25
+msgid "Posts"
+msgstr ""
+
+#: search.php:17
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:23
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
 #: template-parts/footer/credits.php:15
 msgctxt "copyright date format"
 msgid "Y"
@@ -153,8 +217,8 @@ msgstr ""
 msgid "Back to top"
 msgstr ""
 
-#. translators: %s: HTML character for up arrow.
 #: template-parts/footer/credits.php:54
+#, php-format
 msgid "Up %s"
 msgstr ""
 
@@ -166,11 +230,11 @@ msgstr ""
 msgid "Close menu"
 msgstr ""
 
-#: template-parts/page/content.php:29, template-parts/post/content.php:33
+#: template-parts/page/content.php:29 template-parts/post/content.php:33
 msgid "Page"
 msgstr ""
 
-#: template-parts/page/content.php:29, template-parts/post/content.php:33
+#: template-parts/page/content.php:29 template-parts/post/content.php:33
 msgid "Pages:"
 msgstr ""
 
@@ -178,7 +242,7 @@ msgstr ""
 msgid "Nothing Found"
 msgstr ""
 
-#. translators: %1$s: URL to publish post.
 #: template-parts/post/content-none.php:25
+#, php-format
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""

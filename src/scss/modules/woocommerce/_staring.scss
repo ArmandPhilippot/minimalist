@@ -1,0 +1,84 @@
+.woocommerce {
+	p.stars {
+		a {
+			display: inline-block;
+			line-height: $line-height-initial;
+			position: relative;
+			text-decoration: none;
+			text-indent: -999em;
+			width: px-to-rem(20);
+
+			&::before {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: px-to-rem(20);
+				font-family: WooCommerce;
+				font-size: $font_size-xl;
+				content: "\e021";
+				text-indent: 0;
+			}
+
+			&:hover ~ a::before {
+				content: "\e021";
+			}
+
+			&:focus {
+				background: $staring-focus-background-color;
+				color: $staring-focus-color;
+			}
+
+			&:active {
+				outline: none;
+			}
+		}
+
+		&:hover a::before {
+			content: "\e020";
+		}
+
+		&.selected {
+			a.active {
+				&::before {
+					content: "\e020";
+				}
+
+				~ a::before {
+					content: "\e021";
+				}
+
+				&:focus {
+					color: $staring-selected-focus-color;
+				}
+			}
+
+			a:not(.active)::before {
+				content: "\e020";
+			}
+		}
+	}
+
+	.star-rating {
+		font-family: "star";
+		position: relative;
+		width: 5.27em;
+
+		&::before {
+			content: "\73\73\73\73\73";
+			color: $star-rating-color;
+		}
+
+		span {
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		span::before {
+			content: "\53\53\53\53\53";
+			color: $star-rating-color;
+		}
+	}
+}

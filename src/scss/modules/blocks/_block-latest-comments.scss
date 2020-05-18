@@ -1,6 +1,11 @@
 .wp-block-latest-comments {
 	margin-bottom: $spacing_size-md;
+
 	@include list-reset;
+
+	.wp-block-latest-comments__comment {
+		font-size: inherit;
+	}
 
 	&.alignleft,
 	&.alignright {
@@ -46,9 +51,5 @@
 		margin-right: $spacing_size-sm;
 		margin-top: $spacing_size-xxs;
 		width: px-to-rem(40);
-	}
-
-	.wp-block-latest-comments__comment {
-		font-size: inherit;
 	}
 }

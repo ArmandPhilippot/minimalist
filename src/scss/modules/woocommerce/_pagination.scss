@@ -1,0 +1,61 @@
+.woocommerce-pagination {
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+
+	.page-numbers {
+		border: px-to-rem(1) solid $nav-links-border-color;
+		border-radius: px-to-rem(2);
+		padding: $spacing_size-sm $spacing_size-md;
+		margin: 0 px-to-rem(5) $spacing_size-sm 0;
+
+		@include mediaq(screen, 80em) {
+			padding: $spacing_size-xxs $spacing_size-sm;
+		}
+
+		&:last-child {
+			margin: 0 0 $spacing_size-sm 0;
+		}
+	}
+
+	.current {
+		color: $nav-links-current-color;
+		font-weight: 700;
+	}
+
+	.prev::before {
+		content: "\2190";
+		margin-right: $spacing_size-xxs;
+		position: relative;
+		top: px-to-rem(-2);
+	}
+
+	.next::after {
+		content: "\2192";
+		margin-left: $spacing_size-xxs;
+		position: relative;
+		top: px-to-rem(-2);
+	}
+
+	a {
+		background: $nav-links-background-color;
+
+		&:hover {
+			background: $nav-links-hover-background-color;
+			color: $nav-links-hover-color;
+			text-decoration: none;
+		}
+
+		&:focus {
+			background: $nav-links-focus-background-color;
+			color: $nav-links-focus-color;
+			text-decoration: none;
+		}
+
+		&:active {
+			background: $nav-links-active-background-color;
+			color: $nav-links-active-color;
+			text-decoration: none;
+		}
+	}
+}

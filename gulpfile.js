@@ -62,7 +62,7 @@ const zip = require('gulp-zip');
 /**
  * Custom Error Handler.
  *
- * @param Mixed err
+ * @param {*} err
  */
 const onError = err => {
 	notify({
@@ -490,6 +490,22 @@ function translate() {
 }
 
 /**
+ * Task: `moveFonts`.
+ *
+ * Move fonts folder from src to assets.
+ */
+function moveFonts() {
+	return src(config.src.fontsSource)
+		.pipe(dest(config.dest.fontsDest))
+		.pipe(
+			notify({
+				title: 'moveFonts Task Complete',
+				message: 'Fonts folder has been moved.',
+			})
+		);
+}
+
+/**
  * Task: `watchFiles`.
  *
  * Watch for file changes and runs specific tasks.
@@ -527,6 +543,10 @@ function watchFiles(done) {
 		'change',
 		series(translate, browserSync.reload)
 	);
+	watch(config.watch.fontsFiles).on(
+		'change',
+		series(moveFonts, browserSync.reload)
+	);
 	done();
 }
 
@@ -557,7 +577,8 @@ exports.build = series(
 		js,
 		images,
 		svgToPng,
-		translate
+		translate,
+		moveFonts
 	),
 	zipFolder
 );

@@ -20,7 +20,7 @@
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'MINIMALIST_VERSION', '1.0.1' );
+define( 'MINIMALIST_VERSION', '1.1.0' );
 
 if ( ! function_exists( 'minimalist_setup' ) ) {
 	/**
@@ -134,6 +134,14 @@ if ( ! function_exists( 'minimalist_setup' ) ) {
 
 		// Enable support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
+
+		// Make theme compatible with Woocommerce.
+		add_theme_support( 'woocommerce' );
+
+		// Add Woocommerce Gallery support.
+		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
+		add_theme_support( 'wc-product-gallery-slider' );
 
 		// Register menu.
 		register_nav_menus(
@@ -270,3 +278,5 @@ add_action( 'wp_head', 'minimalist_favicon_links' );
  */
 // Additional features.
 require get_parent_theme_file_path( '/inc/template-functions.php' );
+// Woocommerce hooks & filters.
+require get_parent_theme_file_path( '/inc/woocommerce-functions.php' );

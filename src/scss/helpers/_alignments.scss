@@ -1,6 +1,7 @@
 .alignleft {
 	/*rtl:ignore*/
 	float: left;
+
 	/*rtl:ignore*/
 	margin-right: $spacing_size-sm;
 }
@@ -8,6 +9,7 @@
 .alignright {
 	/*rtl:ignore*/
 	float: right;
+
 	/*rtl:ignore*/
 	margin-left: $spacing_size-sm;
 }
@@ -23,6 +25,7 @@
 .alignleft img {
 	clear: both;
 	text-align: center;
+
 	@include center-block;
 }
 

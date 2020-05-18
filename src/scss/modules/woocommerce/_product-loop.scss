@@ -1,0 +1,193 @@
+body.woocommerce {
+	&.has-sidebar .content-container {
+		.site-main > article.product {
+			> .entry-content {
+				> .woocommerce-result-count {
+					@include mediaq(screen, 80em) {
+						display: inline-block;
+						max-width: none;
+					}
+				}
+
+				> .woocommerce-ordering {
+					margin-bottom: $spacing_size-md;
+
+					@include mediaq(screen, 80em) {
+						float: right;
+						margin-left: 0;
+						max-width: none;
+					}
+				}
+			}
+		}
+	}
+
+	&:not(.has-sidebar) .content-container {
+		.site-main > article.product {
+			> .entry-content {
+				> .woocommerce-result-count,
+				> .woocommerce-ordering {
+					@include mediaq(screen, 80em) {
+						max-width: px-to-rem($container_sm/2);
+						width: calc(
+							#{px-to-rem($container_sm/2)} - #{$spacing_size-md}
+						);
+					}
+
+					@include mediaq(screen, 160em) {
+						max-width: px-to-rem($container_md/2);
+						width: calc(
+							#{px-to-rem($container_md/2)} - #{$spacing_size-md}
+						);
+					}
+				}
+
+				> .woocommerce-result-count {
+					@include mediaq(screen, 80em) {
+						float: left;
+						margin-left: calc(
+							(100vw - #{px-to-rem($container_sm)}) / 2
+						);
+						margin-right: initial;
+					}
+
+					@include mediaq(screen, 160em) {
+						margin-left: calc(
+							(100vw - #{px-to-rem($container_md)}) / 2
+						);
+					}
+				}
+
+				> .woocommerce-ordering {
+					@include mediaq(screen, 80em) {
+						float: right;
+						margin-right: calc(
+							(100vw - #{px-to-rem($container_sm)}) / 2
+						);
+						margin-left: initial;
+
+						@include clearfix;
+
+						.orderby {
+							float: right;
+						}
+					}
+
+					@include mediaq(screen, 160em) {
+						margin-right: calc(
+							(100vw - #{px-to-rem($container_md)}) / 2
+						);
+					}
+				}
+			}
+		}
+	}
+}
+
+.woocommerce {
+	.woocommerce-result-count,
+	.woocommerce-ordering {
+		margin-bottom: $spacing_size-md;
+
+		@include mediaq(screen, 80em) {
+			margin-bottom: $spacing_size-lg;
+		}
+	}
+
+	.display-type-title {
+		@include mediaq(screen, 80em) {
+			clear: both;
+		}
+	}
+
+	ul.products {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: stretch;
+
+		@include list-reset;
+
+		@include mediaq(screen, 80em) {
+			clear: both;
+		}
+
+		.product {
+			flex: 0 0 calc(50% - (#{$spacing_size-md} / 2));
+			display: flex;
+			flex-flow: row wrap;
+			align-items: flex-start;
+			margin: 0 $spacing_size-md $spacing_size-md 0;
+			position: relative;
+
+			a:not(.button) {
+				display: block;
+				max-width: 100%;
+				text-decoration: none;
+
+				img {
+					margin: 0 0 $spacing_size-sm;
+				}
+
+				.woocommerce-loop-product_title,
+				.woocommerce-loop-category__title {
+					font-size: $font_size-lg;
+					margin: 0;
+				}
+
+				.product-category-description {
+					color: $product-category-description-color;
+					font-size: $font_size-sm;
+				}
+
+				.price {
+					color: $product-price-color;
+					font-size: $font_size-md;
+					margin: 0 0 $spacing_size-md 0;
+				}
+
+				&:focus {
+					background: transparent;
+					color: $product-link-focus-color;
+				}
+			}
+
+			.button {
+				align-self: end;
+				font-size: $font_size-sm;
+				margin: $spacing_size-sm 0;
+			}
+
+			&:nth-of-type(2n) {
+				margin-right: 0;
+			}
+		}
+
+		@include mediaq(screen, 48em) {
+			@for $i from 2 through 7 {
+				&.columns-#{$i} {
+					.product {
+						flex: 0
+							0
+							calc(
+								(100% - (#{$spacing_size-md} * #{$i - 1})) /
+									#{$i}
+							);
+						margin: 0 $spacing_size-md $spacing_size-md 0;
+
+						&:nth-of-type(#{$i}n) {
+							margin-right: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.term-description {
+		margin-bottom: $spacing_size-md;
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

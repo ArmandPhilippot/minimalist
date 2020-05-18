@@ -8,6 +8,10 @@ table {
 		padding: $spacing_size-sm;
 		word-wrap: break-word;
 		hyphens: auto;
+
+		p:last-child {
+			margin-bottom: 0;
+		}
 	}
 
 	th {

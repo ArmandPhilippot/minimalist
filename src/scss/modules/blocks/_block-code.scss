@@ -11,7 +11,7 @@ pre.wp-block-code {
 		max-height: 35rem;
 	}
 
-	&:not([class*='language-']) {
+	&:not([class*="language-"]) {
 		padding: $spacing_size-md;
 		border-radius: px-to-rem(3);
 	}

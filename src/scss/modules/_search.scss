@@ -9,7 +9,7 @@ input.search-field {
 }
 
 button.search-submit {
-	background: $search-button-background-color url('assets/images/search.svg')
+	background: $search-button-background-color url(assets/images/search.svg)
 		no-repeat scroll center center / 100% 100%;
 	border: px-to-rem(1) solid $search-button-border-color;
 	border-bottom-left-radius: 0;
@@ -34,7 +34,7 @@ button.search-submit {
 	&:hover,
 	&:focus {
 		background: $search-button-hover-background-color
-			url('assets/images/search-focus.svg') no-repeat scroll center center /
+			url(assets/images/search-focus.svg) no-repeat scroll center center /
 			100% 100%;
 		outline: none;
 	}

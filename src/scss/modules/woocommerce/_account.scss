@@ -1,0 +1,131 @@
+.woocommerce-account {
+	.woocommerce {
+		@include clearfix;
+	}
+
+	.woocommerce-form-login__rememberme {
+		margin-bottom: $spacing_size-md;
+	}
+
+	.woocommerce-MyAccount-navigation {
+		@include mediaq(screen, 48em) {
+			float: left;
+			width: 30%;
+		}
+
+		ul {
+			@include list-reset;
+
+			li {
+				a {
+					border: px-to-rem(1) solid $woocommerce-nav-border-color;
+					display: block;
+					padding: $spacing_size-xs;
+				}
+
+				&:not(:last-child) {
+					a {
+						border-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.woocommerce-MyAccount-content {
+		@include mediaq(screen, 48em) {
+			float: right;
+			width: 68%;
+		}
+
+		.shop_table {
+			font-size: $font_size-md;
+			text-align: left;
+
+			tr:not(:last-child) {
+				border-bottom: px-to-rem(1) solid
+					$woocommerce-table-tr-border-color;
+			}
+		}
+
+		fieldset {
+			margin-bottom: $spacing_size-md;
+		}
+
+		.woocommerce-column--billing-address,
+		.woocommerce-column--shipping-address {
+			font-size: $font_size-sm;
+		}
+
+		.woocommerce-password-strength {
+			font-size: $font_size-sm;
+			font-weight: 600;
+			margin: $spacing_size-xs 0 $spacing_size-sm;
+			text-align: right;
+
+			&::after {
+				display: inline-block;
+				margin-left: $spacing_size-xxs;
+			}
+
+			&.short {
+				color: $password-strength-short-color;
+
+				&::after {
+					content: "\002639";
+				}
+			}
+
+			&.bad {
+				color: $password-strength-bad-color;
+
+				&::after {
+					content: "\002639";
+				}
+			}
+
+			&.good {
+				color: $password-strength-good-color;
+
+				&::after {
+					content: "\01F610";
+				}
+			}
+
+			&.strong {
+				color: $password-strength-strong-color;
+
+				&::after {
+					content: "\01F603";
+				}
+			}
+		}
+	}
+
+	.woocommerce-MyAccount-orders {
+		.button {
+			@include add-button-alt;
+		}
+	}
+
+	.woocommerce-Addresses {
+		.col-1,
+		.col-2 {
+			border: px-to-rem(1) solid $address-border-color;
+			margin-bottom: $spacing_size-md;
+			padding: $spacing_size-sm $spacing_size-md;
+
+			address {
+				font-size: $font_size-md;
+
+				p:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.woocommerce-order-details {
+		margin-bottom: $spacing_size-xl;
+	}
+}

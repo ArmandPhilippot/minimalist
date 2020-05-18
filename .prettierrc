@@ -29,6 +29,12 @@
 			"options": {
 				"endOfLine": "crlf"
 			}
+		},
+		{
+			"files": ["*.css", "*.scss"],
+			"options": {
+				"singleQuote": false
+			}
 		}
 	]
 }

@@ -1,0 +1,59 @@
+.woocommerce {
+	.woocommerce-error,
+	.woocommerce-info,
+	.woocommerce-message {
+		padding: 1em 2em 1em 3.5em;
+		margin: 0 0 $spacing_size-lg;
+		position: relative;
+		background-color: $notice-background-color;
+		color: $notice-color;
+		border-top: px-to-rem(3) solid $notice-border-color;
+		list-style: none outside;
+		width: auto;
+		word-wrap: break-word;
+
+		@include clearfix;
+
+		&::before {
+			font-family: WooCommerce;
+			content: "\e028";
+			color: $notice-icon-color;
+			display: inline-block;
+			position: absolute;
+			top: 1em;
+			left: 1.5em;
+		}
+
+		.button {
+			float: right;
+
+			@include add-button-alt;
+		}
+	}
+
+	.woocommerce-info {
+		border-top-color: $notice-info-color;
+
+		&::before {
+			color: $notice-info-color;
+		}
+	}
+
+	.woocommerce-message {
+		border-top-color: $notice-message-color;
+
+		&::before {
+			content: "\e015";
+			color: $notice-message-color;
+		}
+	}
+
+	.woocommerce-error {
+		border-top-color: $notice-error-color;
+
+		&::before {
+			content: "\e016";
+			color: $notice-error-color;
+		}
+	}
+}

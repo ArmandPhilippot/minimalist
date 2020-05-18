@@ -6,7 +6,6 @@ figure {
 }
 
 figcaption {
-	@include center-block;
 	width: auto;
 	max-height: 100%;
 	overflow: auto;
@@ -16,6 +15,8 @@ figcaption {
 	font-size: $font_size-sm;
 	font-weight: 600;
 	background: $figure-caption-background-color;
+
+	@include center-block;
 }
 
 img,

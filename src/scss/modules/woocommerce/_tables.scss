@@ -1,0 +1,59 @@
+.woocommerce {
+	.shop_attributes,
+	.shop_table,
+	.variations {
+		margin-bottom: $spacing_size-md;
+		width: 100%;
+
+		@include table-reset;
+	}
+
+	@include mediaq(screen, null, 48em) {
+		table.shop_table_responsive {
+			thead {
+				display: none;
+			}
+
+			tbody {
+				th {
+					display: none;
+				}
+			}
+
+			tr {
+				display: block;
+
+				td {
+					border-top: px-to-rem(1) solid rgba(0, 0, 0, 0.1);
+					display: block;
+					text-align: right;
+
+					&.product-remove,
+					&.order-actions {
+						text-align: left;
+					}
+
+					&.product-remove {
+						a.remove {
+							font-size: $font_size-xxxxl;
+						}
+					}
+
+					&::before {
+						content: attr(data-title) ": ";
+						font-weight: 700;
+						float: left;
+					}
+
+					&.product-remove,
+					&.product-thumbnail,
+					&.actions {
+						&::before {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}

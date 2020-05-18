@@ -1,0 +1,29 @@
+.woocommerce {
+	.select2-container {
+		.select2-selection--single {
+			border: px-to-rem(1) solid $select-border-color;
+			border-radius: px-to-rem(3);
+			height: px-to-rem(55);
+
+			@include mediaq(screen, 80em) {
+				height: px-to-rem(45);
+			}
+
+			.select2-selection__rendered {
+				line-height: px-to-rem(55);
+
+				@include mediaq(screen, 80em) {
+					line-height: px-to-rem(45);
+				}
+			}
+
+			.select2-selection__arrow {
+				height: px-to-rem(55);
+
+				@include mediaq(screen, 80em) {
+					height: px-to-rem(45);
+				}
+			}
+		}
+	}
+}

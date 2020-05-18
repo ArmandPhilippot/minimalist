@@ -24,56 +24,56 @@ a {
 }
 
 a[hreflang]::after {
-	content: '\0000a0['attr(hreflang) ']';
+	content: "\0000a0["attr(hreflang) "]";
 	font-size: 0.85rem;
-	font-weight: normal;
+	font-weight: 400;
 	vertical-align: top;
 }
 
 /* External links */
 
 a.external::after {
-	content: '\0000a0[\279A]';
+	content: "\0000a0[\279A]";
 	font-size: 0.85rem;
 	vertical-align: top;
 }
 
 a[hreflang].external::after {
-	content: '\0000a0['attr(hreflang) ']\0000a0[\279A]';
+	content: "\0000a0["attr(hreflang) "]\0000a0[\279A]";
 }
 
 /* Mailto */
 
 a.mailto::after {
-	content: '\0000a0\2709';
+	content: "\0000a0\2709";
 	font-size: 1rem;
 	vertical-align: top;
 }
 
 a[hreflang].mailto::after {
-	content: '\0000a0['attr(hreflang) ']\0000a0\2709';
+	content: "\0000a0["attr(hreflang) "]\0000a0\2709";
 }
 
 /* Tel */
 
 a.tel::after {
-	content: '\0000a0\2706';
+	content: "\0000a0\2706";
 	font-size: 1rem;
 	vertical-align: top;
 }
 
 a[hreflang].tel::after {
-	content: '\0000a0['attr(hreflang) ']\0000a0\2706';
+	content: "\0000a0["attr(hreflang) "]\0000a0\2706";
 }
 
 /* Downloads */
 
 a.download::after {
-	content: '\0000a0[\21E9]';
+	content: "\0000a0[\21E9]";
 	font-size: 0.85rem;
 	vertical-align: top;
 }
 
 a[hreflang].download::after {
-	content: '\0000a0['attr(hreflang) ']\0000a0[\21E9]';
+	content: "\0000a0["attr(hreflang) "]\0000a0[\21E9]";
 }

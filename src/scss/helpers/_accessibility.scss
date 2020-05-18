@@ -2,8 +2,7 @@
 .says,
 .screen-reader-text {
 	border: 0;
-	clip: rect(1px 1px 1px 1px);
-	/* IE6, IE7 */
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
 	height: px-to-rem(1);
 	overflow: hidden;
@@ -11,8 +10,7 @@
 	position: absolute !important;
 	width: px-to-rem(1);
 	word-break: normal;
-	word-wrap: normal !important;
-	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
 .screen-reader-text:focus {
@@ -30,6 +28,5 @@
 	padding: px-to-rem(14) px-to-rem(23);
 	top: px-to-rem(7);
 	width: auto;
-	z-index: 100000;
-	/* Above WP toolbar. */
+	z-index: 100000; /* Above WP toolbar. */
 }

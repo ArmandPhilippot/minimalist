@@ -7,9 +7,9 @@
 
 module.exports = {
 	general: {
-		projectName: 'Minimalist',
+		projectName: 'MinimalistWoocommerce',
 		projectFolder: './',
-		projectURL: 'wordpress.test',
+		projectURL: 'woocommerce.test',
 	},
 	// Source files
 	src: {
@@ -23,6 +23,7 @@ module.exports = {
 		imgSource: ['./src/images/**/*.*'],
 		svgSource: ['./src/images/*.svg'],
 		potSource: ['./**/*.php'],
+		fontsSource: ['./src/fonts/**/*.*'],
 	},
 	// Output folders
 	dest: {
@@ -36,6 +37,7 @@ module.exports = {
 		imgDest: './assets/images/',
 		svgDest: './assets/images/',
 		potDest: './languages/',
+		fontsDest: './assets/fonts/',
 	},
 	// Watch these files
 	watch: {
@@ -46,13 +48,14 @@ module.exports = {
 		imgFiles: './src/images/**/*.*',
 		svgFiles: './src/images/*.svg',
 		potFiles: './**/*.php',
+		fontsFiles: './src/fonts/**/*.*',
 	},
 	// BrowserSync options
 	bsConfig: {
 		proxy: {
-			target: 'https://www.wordpress.test',
+			target: 'https://www.woocommerce.test',
 		},
-		hostname: 'wordpress.test',
+		hostname: 'woocommerce.test',
 		port: '8080',
 		open: 'local',
 		browserAutoOpen: false,
@@ -66,7 +69,7 @@ module.exports = {
 			// Provide a custom Regex for inserting the snippet.
 			rule: {
 				match: /<\/body>/i,
-				fn: function (snippet, match) {
+				fn: function(snippet, match) {
 					return snippet + match;
 				},
 			},
@@ -74,7 +77,7 @@ module.exports = {
 		rewriteRules: [
 			{
 				match: /localhost:8080/g,
-				fn: function (req, res, match) {
+				fn: function(req, res, match) {
 					return 'localhost:3000';
 				},
 			},
@@ -126,6 +129,12 @@ module.exports = {
 			'!./{src,src/**/*}',
 			'!./**/*.map',
 			'!./phpcs.xml.dist',
+			'!./.editorconfig',
+			'!./.eslintignore',
+			'!./.eslintrc.js',
+			'!./.gitignore',
+			'!./.prettierrc',
+			'!./.stylelintrc.json',
 		],
 		zipDest: './../',
 	},

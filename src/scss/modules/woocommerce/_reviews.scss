@@ -1,0 +1,54 @@
+.woocommerce {
+	.woocommerce-Reviews {
+		.commentlist {
+			@include list-reset;
+
+			li:not(:first-child) {
+				position: relative;
+				top: px-to-rem(-1);
+			}
+
+			.comment_container {
+				border: px-to-rem(1) solid $comment-border-color;
+				display: flex;
+				flex-flow: row wrap;
+				padding: $spacing_size-sm;
+			}
+
+			.avatar {
+				border: px-to-rem(1) solid $avatar-border-color;
+				flex: 0 0 auto;
+				height: max-content;
+				margin: $spacing_size-xs;
+				padding: px-to-rem(3);
+			}
+
+			.comment-text {
+				flex: 1 1 auto;
+				display: flex;
+				flex-flow: row wrap;
+				padding: $spacing_size-xs $spacing_size-xxs;
+			}
+
+			.star-rating {
+				flex: 0 0 auto;
+				order: 2;
+			}
+
+			.meta {
+				flex: 2 1 auto;
+				order: 1;
+				color: $comment-meta-color;
+			}
+
+			.description {
+				flex: 0 1 100%;
+				order: 3;
+
+				p:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
