@@ -2,7 +2,7 @@
 /**
  * Minimalist-Theme functions and definitions.
  *
- * This file is read by WordPress to setup the theme and his additionnal
+ * This file is read by WordPress to setup the theme and his additional
  * features.
  *
  * @package   Minimalist
@@ -20,7 +20,7 @@
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'MINIMALIST_VERSION', '1.1.0' );
+define( 'MINIMALIST_VERSION', '1.1.1' );
 
 if ( ! function_exists( 'minimalist_setup' ) ) {
 	/**
@@ -135,7 +135,7 @@ if ( ! function_exists( 'minimalist_setup' ) ) {
 		// Enable support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
 
-		// Make theme compatible with Woocommerce.
+		// Make theme compatible with WooCommerce.
 		add_theme_support( 'woocommerce' );
 
 		// Add Woocommerce Gallery support.
@@ -278,5 +278,5 @@ add_action( 'wp_head', 'minimalist_favicon_links' );
  */
 // Additional features.
 require get_parent_theme_file_path( '/inc/template-functions.php' );
-// Woocommerce hooks & filters.
+// WooCommerce hooks & filters.
 require get_parent_theme_file_path( '/inc/woocommerce-functions.php' );
