@@ -15,7 +15,7 @@ Minimalist is a simple WordPress theme. It is responsive, but, as indicated by i
 -   Location for widgets in footer
 -   Translation ready (currently available languages: English and French)
 -   Wide & Full width support (Gutenberg support)
--   Woocommerce support
+-   WooCommerce support
 
 ## Requirements
 
@@ -54,11 +54,12 @@ You can download the theme on Github or Gitlab, then extract it in /wp-content/t
 
 ## Changelog
 
-| Version | Date       | Notes                                                               |
-| ------- | ---------- | ------------------------------------------------------------------- |
-| v1.1.0  | 2020-05-18 | Added Woocommerce support, changed style for sticky posts           |
-| v1.0.1  | 2020-04-10 | Fix some theme prefixes, code alignements, font sizes and positions |
-| v1.0.0  | 2020-04-08 | Stable version                                                      |
+| Version | Date       | Notes                                                                                      |
+| ------- | ---------- | ------------------------------------------------------------------------------------------ |
+| v1.1.1  | 2020-06-07 | Fix the display of sticky posts & pagination on front page when no static page is defined. |
+| v1.1.0  | 2020-05-18 | Added WooCommerce support, changed style for sticky posts                                  |
+| v1.0.1  | 2020-04-10 | Fix some theme prefixes, code alignments, font sizes and positions                         |
+| v1.0.0  | 2020-04-08 | Stable version                                                                             |
 
 ## License
 
